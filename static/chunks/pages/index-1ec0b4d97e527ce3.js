@@ -74,17 +74,41 @@
                             });
                         },
                         f = a.band.name.length > 30 && !a.band.announcement ? a.band.name.slice(0, 30) + "..." : a.band.name;
+
+                    var rating_click_handler = function(e) {
+                        alert("You clicked: " + e.target.innerHTML);
+                        e.cancelBubble = true;
+                    };
+
+                    var rating_button_poop = (0, d.jsx)("button", {
+                        children: ["💩"],
+                        onClick: rating_click_handler,
+                    });
+
+                    var rating_button_heart = (0, d.jsx)("button", {
+                        children: ["❤️"],
+                        onClick: rating_click_handler,
+                    });
+              
+                    var hack_div = (0, d.jsx)("div", {
+                        className: "hack_div",
+                        children: [rating_button_poop, rating_button_heart],
+                    });
+                    document.aaa = hack_div;
+
+
+
                     return (0, d.jsx)("div", {
-                        onClick: function () {
-                            a.currentlyPlaying || a.band.announcement || a.setFavorite();
-                        },
+                        // onClick: function () {
+                        //     a.currentlyPlaying || a.band.announcement || a.setFavorite();
+                        // },
                         className: [
                             o().container,
                             a.band.cancelled ? o().cancelled : !a.currentlyPlaying && a.isFavorite ? o().favorite : a.currentlyPlaying ? o().playing : a.isFavorite || a.currentlyPlaying || !a.favoritesOnly ? void 0 : o().hidden,
                             a.band.announcement && o().announcement,
                         ].join(" "),
                         style: { top: 2 * b + 40, height: (c - b) * 2 },
-                        children: (0, d.jsxs)("div", {
+                        children: [hack_div,(0, d.jsxs)("div", {
                             className: [o().content, o().cancelledContent].join(" "),
                             children: [
                                 (0, d.jsx)("div", { className: o().soundIcon }),
@@ -94,7 +118,7 @@
                                     children: [a.band.cancelled ? "CANCELLED" : a.band.announcement ? "" : a.band.startTime + " - " + a.band.endTime, a.band.oui && e("oui"), "Vildhjarta" === a.band.name && e("thall")],
                                 }),
                             ],
-                        }),
+                        })],
                     });
                 },
                 q = p,
