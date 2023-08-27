@@ -1,0 +1,87 @@
+body,
+html {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color: var(--color-black)
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+p {
+    all: unset
+}
+
+* {
+    box-sizing: border-box;
+    --color-green: #bad9e9;
+    --color-blue: #033e63;
+    --color-blue-dark: #011c2c;
+    --color-yellow: #f7d150;
+    --color-yellow-dark: #5e4802;
+    --color-red: #d33a2f;
+    --color-black: #000d1e
+}
+
+@media (prefers-color-scheme:dark) {
+    html {
+        color-scheme: dark;
+        overflow-x: hidden
+    }
+
+    body {
+        color: #fff;
+        background-color: var(--color-black)
+    }
+}
+
+@font-face {
+    font-family: Geomanist;
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url(../media/Geomanist-Black.f134384b.otf)
+}
+
+@font-face {
+    font-family: Geomanist;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(../media/Geomanist-Bold.f63bf5f5.otf)
+}
+
+@font-face {
+    font-family: Geomanist;
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(../media/Geomanist-Medium.da89aa9f.otf)
+}
+
+@font-face {
+    font-family: Geomanist;
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(../media/Geomanist-Regular.f4a5f038.otf)
+}
+
+@font-face {
+    font-family: Geomanist;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../media/Geomanist-Light.9af81c9c.otf)
+}
+
+@font-face {
+    font-family: Geomanist;
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(../media/Geomanist-ExtraLight.3abe6c6a.otf)
+}

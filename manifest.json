@@ -1,0 +1,16 @@
+{
+  "name": "Euroblast Times",
+  "short_name": "Euroblast",
+  "icons": [
+    {
+      "src": "/index.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#FFFFFF",
+  "background_color": "#FFFFFF",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+}
