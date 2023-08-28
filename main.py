@@ -94,7 +94,7 @@ def rate():
     except KeyError:
         ratings[rating['band']][rating['person']] = '💩'
 
-    if len(rating['rating']) != 1:
+    if len(rating['rating']) != 1 and not isinstance(rating['rating'], str):
         del ratings[rating['band']][rating['person']]
     else:
         ratings[rating['band']][rating['person']] = rating['rating']
