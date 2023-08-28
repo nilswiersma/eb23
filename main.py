@@ -4,15 +4,18 @@ from markupsafe import escape
 
 app = Flask(__name__)
 
-valid_names = []
-valid_bands = []
+valid_names = ['bas', 'eric', 'nils', 'thomas', 'tom']
+with open('data/schedule.json', 'r') as f:
+    schedule = json.load(f)
+    valid_bands = list({x['name'] for x in schedule['props']['pageProps']['bands']})
 
 @app.route('/')
 @app.route('/<name>')
 def index(name=None):
     if name and name in valid_names:
-        print(f'{name=}')
-        person = name
+        # print(f'{name=}')
+        # person = name
+        pass
     elif not name:
         name = request.cookies.get('name', None)
         pass
@@ -22,7 +25,7 @@ def index(name=None):
     # TODO add file lock
     ratings = {}
     try:
-        with open('static/ratings.json', 'r') as f:
+        with open('data/ratings.json', 'r') as f:
             try:
                 ratings = json.load(f)
             except json.decoder.JSONDecodeError as e:
@@ -32,7 +35,7 @@ def index(name=None):
 
     reviews = {}
     try:
-        with open('static/reviews.json', 'r') as f:
+        with open('data/reviews.json', 'r') as f:
             try:
                 reviews = json.load(f)
             except json.decoder.JSONDecodeError as e:
@@ -40,7 +43,7 @@ def index(name=None):
     except FileNotFoundError as e:
         app.logger.warning(e)
 
-    with open('static/schedule.json', 'r') as f:
+    with open('data/schedule.json', 'r') as f:
         schedule = json.load(f)
 
     for band in schedule['props']['pageProps']['bands']:
@@ -73,7 +76,7 @@ def rate():
     # TODO add file lock
     ratings = {}
     try:
-        with open('static/ratings.json', 'r') as f:
+        with open('data/ratings.json', 'r') as f:
             try:
                 ratings = json.load(f)
             except json.decoder.JSONDecodeError as e:
@@ -96,7 +99,7 @@ def rate():
     else:
         ratings[rating['band']][rating['person']] = rating['rating']
 
-    with open('static/ratings.json', 'w') as f:
+    with open('data/ratings.json', 'w') as f:
         json.dump(ratings, f, indent=4)
     
     return 'ok'
@@ -106,7 +109,7 @@ def reviews():
     # TODO add file lock
     reviews = {}
     try:
-        with open('static/reviews.json', 'r') as f:
+        with open('data/reviews.json', 'r') as f:
             try:
                 reviews = json.load(f)
             except json.decoder.JSONDecodeError as e:
@@ -125,7 +128,7 @@ def reviews():
         
         reviews[review['band']] = review['content']
 
-        with open('static/reviews.json', 'w') as f:
+        with open('data/reviews.json', 'w') as f:
             json.dump(reviews, f, indent=4)
 
     return 'ok'
@@ -134,7 +137,7 @@ def reviews():
 def ratings():
     ratings = {}
     try:
-        with open('static/ratings.json', 'r') as f:
+        with open('data/ratings.json', 'r') as f:
             try:
                 ratings = json.load(f)
             except json.decoder.JSONDecodeError as e:
@@ -144,8 +147,5 @@ def ratings():
     return ratings
 
 if __name__ == '__main__':
-    valid_names = ['bas', 'eric', 'nils', 'thomas', 'tom']
-    with open('static/schedule.json', 'r') as f:
-        schedule = json.load(f)
-        valid_bands = list({x['name'] for x in schedule['props']['pageProps']['bands']})
-    app.run(debug=True, use_reloader=True)
+    # app.run(debug=True, use_reloader=True)
+    app.run()
