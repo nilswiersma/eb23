@@ -3,11 +3,39 @@
         "pageProps": {
             "bands": [
                 {
+                    "oui": true,
+                    "announcement": true,
+                    "name": "Lijmpie",
+                    "startTime": "13:00",
+                    "endTime": "13:15",
+                    "day": "friday",
+                    "stage": "1"
+                },
+                {
+                    "oui": true,
+                    "announcement": true,
+                    "name": "Lijmpie",
+                    "startTime": "13:00",
+                    "endTime": "13:15",
+                    "day": "saturday",
+                    "stage": "1"
+                },
+                {
+                    "oui": true,
+                    "announcement": true,
+                    "name": "Lijmpie",
+                    "startTime": "13:00",
+                    "endTime": "13:15",
+                    "day": "sunday",
+                    "stage": "1"
+                },
+                {
                     "endTime": "23:15",
                     "startTime": "21:45",
                     "name": "Voyager",
                     "stage": "1",
-                    "day": "sunday"
+                    "day": "sunday",
+                    "review": "Head-headliner? Really?"
                 },
                 {
                     "endTime": "19:50",
@@ -15,14 +43,6 @@
                     "day": "friday",
                     "stage": "2",
                     "startTime": "19:10"
-                },
-                {
-                    "cancelled": true,
-                    "name": "A Kew's Tag",
-                    "stage": "5",
-                    "startTime": "16:05",
-                    "day": "sunday",
-                    "endTime": "16:40"
                 },
                 {
                     "startTime": "17:45",
@@ -60,7 +80,7 @@
                     "stage": "1"
                 },
                 {
-                    "name": "Allllllllt",
+                    "name": "Allt",
                     "stage": "1",
                     "startTime": "15:20",
                     "day": "sunday",
@@ -86,22 +106,6 @@
                     "stage": "2",
                     "startTime": "16:05",
                     "name": "Primaterra"
-                },
-                {
-                    "endTime": "19:15",
-                    "stage": "1",
-                    "announcement": true,
-                    "startTime": "19:01",
-                    "day": "saturday",
-                    "name": "FESTIVAL SHOUT-OUTS"
-                },
-                {
-                    "announcement": true,
-                    "name": "OFFICIAL FESTIVAL WELCOME",
-                    "stage": "1",
-                    "day": "friday",
-                    "startTime": "19:01",
-                    "endTime": "19:15"
                 },
                 {
                     "startTime": "17:30",
@@ -189,18 +193,10 @@
                 },
                 {
                     "startTime": "17:30",
-                    "name": "A Kew's Tag",
+                    "name": "A Kews Tag",
                     "endTime": "18:10",
                     "stage": "2",
                     "day": "saturday"
-                },
-                {
-                    "day": "saturday",
-                    "name": "The Sleeper",
-                    "endTime": "16:40",
-                    "cancelled": true,
-                    "startTime": "16:05",
-                    "stage": "5"
                 },
                 {
                     "stage": "1",
@@ -266,13 +262,7 @@
                     "startTime": "21:00"
                 }
             ]
-        },
-        "__N_SSG": true
+        }
     },
-    "page": "/",
-    "query": {},
-    "buildId": "0VwzYt5qYofgmFID3cMyR",
-    "isFallback": false,
-    "gsp": true,
-    "scriptLoader": []
+    "page": "/"
 }

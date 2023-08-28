@@ -1,3 +1,27 @@
+async function post_rating(person, band, rating) {
+    console.log(person + " rates " + band + " with " + rating);
+
+    await fetch("/rate", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            "person": person,
+            "band": band,
+            "rating": rating,
+        })
+    }).then(resp => {
+        return resp.text();
+    }).then(resp => {
+        console.log(resp);
+        if (resp == 'ok') {
+            // location.reload();
+        }
+    });
+    
+}
+
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
     [405],
     {
@@ -73,28 +97,33 @@
                                 ],
                             });
                         },
-                        f = a.band.name.length > 30 && !a.band.announcement ? a.band.name.slice(0, 30) + "..." : a.band.name;
+                        bandName2 = a.band.name.length > 30 && !a.band.announcement ? a.band.name.slice(0, 30) + "..." : a.band.name;
 
                     var rating_click_handler = function(e) {
-                        alert("You clicked: " + e.target.innerHTML);
-                        e.cancelBubble = true;
+                        let person = document.cookie.split('=')[1];
+                        if (person) {
+                            let rating = prompt(a.band.name + "\n------\n" + a.band.review, "Uw emoji hier.");
+                            post_rating(person, a.band.name, rating);
+                        } else {
+                            alert(a.band.name + "\n------\n" + a.band.review);
+                        }
                     };
 
                     var rating_button_poop = (0, d.jsx)("button", {
                         children: ["💩"],
-                        onClick: rating_click_handler,
+                        // onClick: rating_click_handler,
                     });
 
                     var rating_button_heart = (0, d.jsx)("button", {
                         children: ["❤️"],
-                        onClick: rating_click_handler,
+                        // onClick: rating_click_handler,
                     });
               
                     var hack_div = (0, d.jsx)("div", {
                         className: "hack_div",
                         children: [rating_button_poop, rating_button_heart],
                     });
-                    document.aaa = hack_div;
+                    // document.aaa = hack_div;
 
 
 
@@ -102,17 +131,22 @@
                         // onClick: function () {
                         //     a.currentlyPlaying || a.band.announcement || a.setFavorite();
                         // },
+                        onClick: rating_click_handler,
                         className: [
                             o().container,
                             a.band.cancelled ? o().cancelled : !a.currentlyPlaying && a.isFavorite ? o().favorite : a.currentlyPlaying ? o().playing : a.isFavorite || a.currentlyPlaying || !a.favoritesOnly ? void 0 : o().hidden,
                             a.band.announcement && o().announcement,
                         ].join(" "),
                         style: { top: 2 * b + 40, height: (c - b) * 2 },
-                        children: [hack_div,(0, d.jsxs)("div", {
+                        children: [//hack_div,
+                            (0, d.jsxs)("div", {
                             className: [o().content, o().cancelledContent].join(" "),
                             children: [
                                 (0, d.jsx)("div", { className: o().soundIcon }),
-                                (0, d.jsxs)("p", { children: [f.charAt(0).toUpperCase() + f.slice(1, f.length), " "] }),
+                                (0, d.jsxs)("p", { // ratings
+                                    className: o().times,
+                                    children: a.band.rating}),
+                                (0, d.jsxs)("p", { children: [bandName2.charAt(0).toUpperCase() + bandName2.slice(1, bandName2.length), " "] }),
                                 (0, d.jsxs)("p", {
                                     className: o().times,
                                     children: [a.band.cancelled ? "CANCELLED" : a.band.announcement ? "" : a.band.startTime + " - " + a.band.endTime, a.band.oui && e("oui"), "Vildhjarta" === a.band.name && e("thall")],
@@ -122,7 +156,7 @@
                     });
                 },
                 q = p,
-                r = function (a) {
+                r1 = function (a) {
                     var b = a.selectedDay,
                         c = a.currentTime,
                         e = a.favoritesOnly,
@@ -211,7 +245,6 @@
                                     children: [
                                         a.charAt(0).toUpperCase() + a.slice(1),
                                         "\n",
-                                        (0, d.jsx)("p", { className: t().date, children: "friday" === (e = a) ? "30/09" : "saturday" === e ? "01/10" : "sunday" === e ? "02/10" : void 0 }),
                                     ],
                                 },
                                 a
@@ -226,18 +259,60 @@
                                     return g(a);
                                 }),
                             }),
-                            (0, d.jsx)("div", {
-                                className: [t().day, t().fav, f && t().favSelected].join(" "),
-                                onClick: function () {
-                                    e(!f);
-                                },
-                                children: "Favorites only",
-                            }),
+                            // (0, d.jsx)("div", {
+                            //     className: [t().day, t().fav, f && t().favSelected].join(" "),
+                            //     onClick: function () {
+                            //         e(!f);
+                            //     },
+                            //     children: "Favorites only",
+                            // }),
+                            // (0, d.jsx)("div", {
+                            //     className: t().maxWidthContainer,
+                            //     onClick: function(e) {
+                            //         console.log("clicked " + e.innerHTML);
+                            //     },
+                            //     children: "Rating: " +  ["🔥", "💩", "⛽"].map(function (a) {
+                            //         return "" + a;
+                            //     }),
+                            // }),
                         ],
                     });
                 },
                 v = u,
                 w = c(536),
+                    //     return (0, d.jsx)("div", {
+                    //         className: B().container,
+                    //         children: (0, d.jsxs)("div", {
+                    //             className: "jsx-f1a630fdedc591e5 " + (B().image || ""),
+                    //             children: [
+                    //                 // (0, d.jsx)(z(), { src: C, alt: "Euroblast logo" }),
+                    //                 // (0, d.jsx)("div", {
+                    //                 //     className: "jsx-f1a630fdedc591e5 " + (B().euroblast2023 || ""),
+                    //                 //     children: (0, d.jsx)("a", {
+                    //                 //         href: "https://tickets.euroblast.net/",
+                    //                 //         target: "_blank",
+                    //                 //         rel: "noreferrer",
+                    //                 //         onClick: function () {
+                    //                 //             var a = (0, D.IH)();
+                    //                 //             (0, D.Kz)(a, "press_tickets");
+                    //                 //         },
+                    //                 //         style: { display: "inline-block" },
+                    //                 //         className: "jsx-f1a630fdedc591e5",
+                    //                 //         children: "EUROBLAST 2023 - Tickets 20% off!".split("").map(function (a, b) {
+                    //                 //             return (0, d.jsx)("div", { className: "jsx-f1a630fdedc591e5 " + (B().letter || ""), children: a }, a);
+                    //                 //         }),
+                    //                 //     }),
+                    //                 // }),
+                    //                 // (0, d.jsx)(x(), {
+                    //                 //     id: "f1a630fdedc591e5",
+                    //                 //     children:
+                    //                 //         "@-webkit-keyframes blink{0%{opacity:.5}50%{opacity:1}100%{opacity:.5}}@-moz-keyframes blink{0%{opacity:.5}50%{opacity:1}100%{opacity:.5}}@-o-keyframes blink{0%{opacity:.5}50%{opacity:1}100%{opacity:.5}}@keyframes blink{0%{opacity:.5}50%{opacity:1}100%{opacity:.5}}",
+                    //                 // }),
+                    //             ],
+                    //         }),
+                    //     });
+                    // },
+                    // F = E,
                 x = c.n(w),
                 y = c(5675),
                 z = c.n(y),
@@ -250,40 +325,40 @@
                     // blurDataURL: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAABCAMAAADU3h9xAAAADFBMVEX+/v7+/v7+/v7+/v4ctB8bAAAABHRSTlOQonZrdypokAAAAAlwSFlzAAALEwAACxMBAJqcGAAAABFJREFUCJljYGJgZGRkYGAGAAArAAmQKGCpAAAAAElFTkSuQmCC",
                 },
                 D = c(5762),
-                E = function () {
-                    return (0, d.jsx)("div", {
-                        className: B().container,
-                        children: (0, d.jsxs)("div", {
-                            className: "jsx-f1a630fdedc591e5 " + (B().image || ""),
-                            children: [
-                                // (0, d.jsx)(z(), { src: C, alt: "Euroblast logo" }),
-                                // (0, d.jsx)("div", {
-                                //     className: "jsx-f1a630fdedc591e5 " + (B().euroblast2023 || ""),
-                                //     children: (0, d.jsx)("a", {
-                                //         href: "https://tickets.euroblast.net/",
-                                //         target: "_blank",
-                                //         rel: "noreferrer",
-                                //         onClick: function () {
-                                //             var a = (0, D.IH)();
-                                //             (0, D.Kz)(a, "press_tickets");
-                                //         },
-                                //         style: { display: "inline-block" },
-                                //         className: "jsx-f1a630fdedc591e5",
-                                //         children: "EUROBLAST 2023 - Tickets 20% off!".split("").map(function (a, b) {
-                                //             return (0, d.jsx)("div", { className: "jsx-f1a630fdedc591e5 " + (B().letter || ""), children: a }, a);
-                                //         }),
-                                //     }),
-                                // }),
-                                // (0, d.jsx)(x(), {
-                                //     id: "f1a630fdedc591e5",
-                                //     children:
-                                //         "@-webkit-keyframes blink{0%{opacity:.5}50%{opacity:1}100%{opacity:.5}}@-moz-keyframes blink{0%{opacity:.5}50%{opacity:1}100%{opacity:.5}}@-o-keyframes blink{0%{opacity:.5}50%{opacity:1}100%{opacity:.5}}@keyframes blink{0%{opacity:.5}50%{opacity:1}100%{opacity:.5}}",
-                                // }),
-                            ],
-                        }),
-                    });
-                },
-                F = E,
+                // E = function () {
+                //     return (0, d.jsx)("div", {
+                //         className: B().container,
+                //         children: (0, d.jsxs)("div", {
+                //             className: "jsx-f1a630fdedc591e5 " + (B().image || ""),
+                //             children: [
+                //                 // (0, d.jsx)(z(), { src: C, alt: "Euroblast logo" }),
+                //                 // (0, d.jsx)("div", {
+                //                 //     className: "jsx-f1a630fdedc591e5 " + (B().euroblast2023 || ""),
+                //                 //     children: (0, d.jsx)("a", {
+                //                 //         href: "https://tickets.euroblast.net/",
+                //                 //         target: "_blank",
+                //                 //         rel: "noreferrer",
+                //                 //         onClick: function () {
+                //                 //             var a = (0, D.IH)();
+                //                 //             (0, D.Kz)(a, "press_tickets");
+                //                 //         },
+                //                 //         style: { display: "inline-block" },
+                //                 //         className: "jsx-f1a630fdedc591e5",
+                //                 //         children: "EUROBLAST 2023 - Tickets 20% off!".split("").map(function (a, b) {
+                //                 //             return (0, d.jsx)("div", { className: "jsx-f1a630fdedc591e5 " + (B().letter || ""), children: a }, a);
+                //                 //         }),
+                //                 //     }),
+                //                 // }),
+                //                 // (0, d.jsx)(x(), {
+                //                 //     id: "f1a630fdedc591e5",
+                //                 //     children:
+                //                 //         "@-webkit-keyframes blink{0%{opacity:.5}50%{opacity:1}100%{opacity:.5}}@-moz-keyframes blink{0%{opacity:.5}50%{opacity:1}100%{opacity:.5}}@-o-keyframes blink{0%{opacity:.5}50%{opacity:1}100%{opacity:.5}}@keyframes blink{0%{opacity:.5}50%{opacity:1}100%{opacity:.5}}",
+                //                 // }),
+                //             ],
+                //         }),
+                //     });
+                // },
+                // F = E,
                 G = c(3867),
                 H = c.n(G),
                 I = function (a) {
@@ -355,16 +430,16 @@
                     return (
                         (0, g.useEffect)(function () {
                             n(h());
-                            var a = (0, O.ZF)({
-                                apiKey: "AIzaSyD9r95WVaZtHJs5xJy1FoS6El0m4NoFvQQ",
-                                authDomain: "euroblast-timetable.firebaseapp.com",
-                                projectId: "euroblast-timetable",
-                                storageBucket: "euroblast-timetable.appspot.com",
-                                messagingSenderId: "1031752229494",
-                                appId: "1:1031752229494:web:1ede39cecadc90f61a7557",
-                                measurementId: "G-EWH4WPNW86",
-                            });
-                            (0, D.IH)(a);
+                            // var a = (0, O.ZF)({
+                            //     apiKey: "AIzaSyD9r95WVaZtHJs5xJy1FoS6El0m4NoFvQQ",
+                            //     authDomain: "euroblast-timetable.firebaseapp.com",
+                            //     projectId: "euroblast-timetable",
+                            //     storageBucket: "euroblast-timetable.appspot.com",
+                            //     messagingSenderId: "1031752229494",
+                            //     appId: "1:1031752229494:web:1ede39cecadc90f61a7557",
+                            //     measurementId: "G-EWH4WPNW86",
+                            // });
+                            // (0, D.IH)(a);
                         }, []),
                         L(function () {
                             n(h());
@@ -375,13 +450,14 @@
                                 (0, d.jsxs)(f(), {
                                     children: [(0, d.jsx)("title", { children: "Euroblast Timetables" }), (0, d.jsx)("link", { rel: "manifest", href: "/manifest.json" }), (0, d.jsx)("meta", { name: "theme-color", content: "#000d1e" })],
                                 }),
-                                (0, d.jsx)(F, {}),
+                                // (0, d.jsx)(F, {}),
                                 (0, d.jsx)(v, { selected: j, onSelect: k, favoritesOnly: p, setFavoritesOnly: q }),
                                 (0, d.jsxs)("div", {
                                     className: N().timetable,
-                                    children: [m && (0, d.jsx)("div", { children: (0, d.jsx)(J, { currentTime: m, currentDay: j }) }), m && (0, d.jsx)(r, { bands: a.bands, selectedDay: j, currentTime: m, favoritesOnly: p })],
+                                    children: [m && 
+                                        (0, d.jsx)("div", { children: (0, d.jsx)(J, { currentTime: m, currentDay: j }) }), m && 
+                                        (0, d.jsx)(r1, { bands: a.bands, selectedDay: j, currentTime: m, favoritesOnly: p })],
                                 }),
-                                (0, d.jsx)("br", {}),
                                 // (0, d.jsxs)("p", {
                                 //     children: [
                                 //         "Made with ❤️ by",
@@ -399,6 +475,8 @@
                                 //     ],
                                 // }),
                                 // (0, d.jsxs)("div", { className: N().bug, children: ["Bug report:", " ", (0, d.jsx)("a", { href: "https://twitter.com/the_Algorithm", target: "_blank", rel: "noreferrer", children: "@thealgorithm" })] }),
+                                (0, d.jsx)("div", {children: document.cookie.split('=')[1]}),
+
                             ],
                         })
                     );
@@ -434,6 +512,18 @@
                 date: "DaySelector_date__tf9Nx",
                 selected: "DaySelector_selected__vuEuk",
                 favSelected: "DaySelector_favSelected__Fv46P",
+            };
+        },
+        2670: function (a) {
+            console.log("hello from 2670");
+            a.exports = {
+                container: "Hack_container__zcpNq",
+                maxWidthContainer: "Hack_maxWidthContainer__qziIJ",
+                day: "Hack_day__SjKsZ",
+                fav: "Hack_fav__zAdaD",
+                date: "Hack_date__tf9Nx",
+                selected: "Hack_selected__vuEuk",
+                favSelected: "Hack_favSelected__Fv46P",
             };
         },
         422: function (a) {
