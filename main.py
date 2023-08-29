@@ -1,4 +1,5 @@
 import json
+import logging
 from flask import Flask, make_response, render_template, request, redirect, url_for, jsonify
 from markupsafe import escape
 
@@ -70,7 +71,7 @@ def rate():
         return 'nok'
     if rating['band'] not in valid_bands:
         return 'nok'
-    if not rating['rating']:
+    if rating['rating'] == None:
         return 'nok'
 
     # TODO add file lock
@@ -94,7 +95,10 @@ def rate():
     except KeyError:
         ratings[rating['band']][rating['person']] = '💩'
 
-    if len(rating['rating']) != 1 and not isinstance(rating['rating'], str):
+    print(rating)
+    print(len(rating['rating']))
+
+    if len(rating['rating']) != 1 or not isinstance(rating['rating'], str):
         del ratings[rating['band']][rating['person']]
     else:
         ratings[rating['band']][rating['person']] = rating['rating']
@@ -147,5 +151,5 @@ def ratings():
     return ratings
 
 if __name__ == '__main__':
-    # app.run(debug=True, use_reloader=True)
-    app.run()
+    app.run(debug=True, use_reloader=True)
+    # app.run()
