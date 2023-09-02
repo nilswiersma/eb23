@@ -98,7 +98,7 @@ def rate():
     print(rating)
     print(len(rating['rating']))
 
-    if len(rating['rating']) != 1 or not isinstance(rating['rating'], str):
+    if len(rating['rating']) > 10 or not isinstance(rating['rating'], str):
         del ratings[rating['band']][rating['person']]
     else:
         ratings[rating['band']][rating['person']] = rating['rating']
@@ -149,6 +149,10 @@ def ratings():
     except FileNotFoundError as e:
         app.logger.warning(e)
     return ratings
+
+@app.route('/playlist')
+def playlist():
+    return render_template('./playlist.html')
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)

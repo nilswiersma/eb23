@@ -59,13 +59,6 @@
                     "stage": "2"
                 },
                 {
-                    "day": "sunday",
-                    "startTime": "21:00",
-                    "stage": "2",
-                    "endTime": "21:40",
-                    "name": "Azure"
-                },
-                {
                     "startTime": "15:20",
                     "name": "Feather Mountain",
                     "day": "saturday",
@@ -97,7 +90,7 @@
                     "day": "saturday",
                     "startTime": "19:10",
                     "endTime": "19:50",
-                    "name": "The City Sours",
+                    "name": "The CityIsOurs",
                     "stage": "2"
                 },
                 {

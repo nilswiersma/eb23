@@ -98,6 +98,9 @@ async function post_rating(person, band, rating) {
                             });
                         },
                         bandName2 = a.band.name.length > 30 && !a.band.announcement ? a.band.name.slice(0, 30) + "..." : a.band.name;
+                        if (a.band.review) {
+                            bandName2 += '*';
+                        }
 
                     var rating_click_handler = function(e) {
                         let person = document.cookie.split('=')[1];
