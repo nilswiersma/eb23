@@ -1,0 +1,13 @@
+<link rel="preload" href="static/css/51f481c946f5cddc.css" as="style" />
+<link rel="stylesheet" href="static/css/51f481c946f5cddc.css" data-n-g="" />
+<link rel="preload" href="static/css/d5e43d44d6da1600.css" as="style" />
+<link rel="stylesheet" href="static/css/d5e43d44d6da1600.css" data-n-p="" />
+
+<script src="{{ url_for('static', filename='vkbeautify.0.99.00.beta.js') }}" defer=""></script>
+
+<span id="ratings" style="white-space: pre-wrap"></span>
+<script>
+    window.addEventListener('load', async () => {
+        document.querySelector('#ratings').innerHTML = vkbeautify.json({{ ratings|tojson }}, 4);
+    });
+</script>
