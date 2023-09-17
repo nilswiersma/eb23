@@ -3,33 +3,6 @@
         "pageProps": {
             "bands": [
                 {
-                    "oui": true,
-                    "announcement": true,
-                    "name": "Lijmpie",
-                    "startTime": "13:00",
-                    "endTime": "13:15",
-                    "day": "friday",
-                    "stage": "1"
-                },
-                {
-                    "oui": true,
-                    "announcement": true,
-                    "name": "Lijmpie",
-                    "startTime": "13:00",
-                    "endTime": "13:15",
-                    "day": "saturday",
-                    "stage": "1"
-                },
-                {
-                    "oui": true,
-                    "announcement": true,
-                    "name": "Lijmpie",
-                    "startTime": "13:00",
-                    "endTime": "13:15",
-                    "day": "sunday",
-                    "stage": "1"
-                },
-                {
                     "endTime": "23:15",
                     "startTime": "21:45",
                     "name": "Voyager",
@@ -53,8 +26,8 @@
                 },
                 {
                     "name": "Omnific",
-                    "endTime": "19:55",
-                    "startTime": "19:15",
+                    "endTime": "22:00",
+                    "startTime": "21:15",
                     "day": "sunday",
                     "stage": "2"
                 },
@@ -88,21 +61,21 @@
                 },
                 {
                     "day": "saturday",
-                    "startTime": "19:10",
-                    "endTime": "19:50",
+                    "startTime": "20:55",
+                    "endTime": "21:40",
                     "name": "The CityIsOurs",
                     "stage": "2"
                 },
                 {
                     "day": "saturday",
-                    "endTime": "16:40",
+                    "endTime": "18:10",
                     "stage": "2",
-                    "startTime": "16:05",
+                    "startTime": "17:30",
                     "name": "Primaterra"
                 },
                 {
-                    "startTime": "17:30",
-                    "endTime": "18:10",
+                    "startTime": "19:15",
+                    "endTime": "19:55",
                     "name": "Playgrounded",
                     "day": "sunday",
                     "stage": "2"
@@ -131,21 +104,21 @@
                 {
                     "day": "sunday",
                     "stage": "2",
-                    "endTime": "15:15",
+                    "endTime": "16:40",
                     "name": "E.N.D.",
-                    "startTime": "14:40"
+                    "startTime": "16:05"
                 },
                 {
                     "day": "sunday",
                     "name": "Future Static",
                     "stage": "2",
-                    "startTime": "16:05",
-                    "endTime": "16:40"
+                    "startTime": "17:30",
+                    "endTime": "18:10"
                 },
                 {
                     "day": "saturday",
-                    "endTime": "01:15",
-                    "startTime": "23:30",
+                    "endTime": "01:00",
+                    "startTime": "00:15",
                     "name": "Sextrow",
                     "stage": "2"
                 },
@@ -157,9 +130,9 @@
                     "endTime": "14:35"
                 },
                 {
-                    "startTime": "20:55",
+                    "startTime": "23:15",
                     "day": "saturday",
-                    "endTime": "21:40",
+                    "endTime": "00:00",
                     "name": "Monosphere",
                     "stage": "2"
                 },
@@ -185,9 +158,9 @@
                     "endTime": "23:15"
                 },
                 {
-                    "startTime": "17:30",
+                    "startTime": "19:10",
                     "name": "A Kews Tag",
-                    "endTime": "18:10",
+                    "endTime": "19:50",
                     "stage": "2",
                     "day": "saturday"
                 },
@@ -216,7 +189,7 @@
                     "startTime": "20:00",
                     "day": "sunday",
                     "name": "Einar Solberg",
-                    "endTime": "21:00",
+                    "endTime": "20:50",
                     "stage": "1"
                 },
                 {
@@ -228,22 +201,22 @@
                 },
                 {
                     "name": "The Sleeper",
+                    "startTime": "16:05",
+                    "endTime": "16:40",
+                    "stage": "2",
+                    "day": "saturday"
+                },
+                {
+                    "name": "Tiberius",
                     "startTime": "14:40",
                     "endTime": "15:15",
                     "stage": "2",
                     "day": "saturday"
                 },
                 {
-                    "name": "Tiberius",
-                    "startTime": "14:00",
-                    "endTime": "14:40",
-                    "stage": "2",
-                    "day": "saturday"
-                },
-                {
                     "name": "Northern Lights",
                     "startTime": "13:20",
-                    "endTime": "14:00",
+                    "endTime": "13:55",
                     "stage": "2",
                     "day": "saturday"
                 },
@@ -253,6 +226,27 @@
                     "stage": "2",
                     "endTime": "21:40",
                     "startTime": "21:00"
+                },
+                {
+                    "name": "Bipolar Architecture",
+                    "day": "sunday",
+                    "stage": "2",
+                    "endTime": "15:15",
+                    "startTime": "14:40"
+                },
+                {
+                    "name": "Afterparty: Sentero Luminosu",
+                    "day": "friday",
+                    "stage": "2",
+                    "endTime": "00:30",
+                    "startTime": "23:00"
+                },
+                {
+                    "name": "Afterparty: Remi Gallego",
+                    "day": "sunday",
+                    "stage": "2",
+                    "endTime": "02:00",
+                    "startTime": "23:00"
                 }
             ]
         }

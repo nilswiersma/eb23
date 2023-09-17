@@ -3,11 +3,35 @@
 <link rel="preload" href="static/css/d5e43d44d6da1600.css" as="style" />
 <link rel="stylesheet" href="static/css/d5e43d44d6da1600.css" data-n-p="" />
 
-<script src="{{ url_for('static', filename='vkbeautify.0.99.00.beta.js') }}" defer=""></script>
-
-<span id="ratings" style="white-space: pre-wrap"></span>
-<script>
-    window.addEventListener('load', async () => {
-        document.querySelector('#ratings').innerHTML = vkbeautify.json({{ ratings|tojson }}, 4);
-    });
-</script>
+<table style="border-collapse: collapse;">
+<tr style="border-bottom: 1pt solid white;">
+    <td></td>
+    <td>bas</td>
+    <td>eric</td>
+    <td>thomas</td>
+    <td>tom</td>
+    <td>nils</td>
+</tr>
+{% for band, ratings in ratings.items()|sort %}
+<tr style="border-bottom: 1pt solid white;">
+    <td>
+        {{ band }}
+    </td>
+    <td>
+        {{ ratings['bas'] }}
+    </td>
+    <td>
+        {{ ratings['eric'] }}
+    </td>
+    <td>
+        {{ ratings['thomas'] }}
+    </td>
+    <td>
+        {{ ratings['tom'] }}
+    </td>
+    <td>
+        {{ ratings['nils'] }}
+    </td>
+</tr>
+{% endfor %}
+</table>
