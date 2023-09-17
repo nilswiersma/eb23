@@ -1,7 +1,112 @@
 {
-    "Disillusion": {},
-    "GGGOLDDD": {},
-    "Mankind": {},
-    "Sheer Cerebral Power": {},
-    "R3v0": {}
+    "The Ocean": {
+        "nils": "\ud83e\udd96",
+        "thomas": "\ud83e\udd95",
+        "bas": "\ud83d\udc95"
+    },
+    "Voyager": {
+        "nils": "\ud83d\ude82",
+        "bas": "\ud83d\udca9",
+        "tom": "\ud83e\udd43",
+        "thomas": "\ud83d\udca9"
+    },
+    "Allt": {
+        "thomas": "\u2764\ufe0f",
+        "nils": "",
+        "bas": "\u2764"
+    },
+    "Future Static": {
+        "thomas": "\ud83d\ude46",
+        "nils": "\ud83d\udca9"
+    },
+    "A Kews Tag": {
+        "thomas": "\u2764\ufe0f",
+        "bas": "\u2764",
+        "nils": "\ud83d\udc9c"
+    },
+    "Ghost Iris": {
+        "thomas": "\u2764\ufe0f",
+        "bas": "\ud83d\udc7b"
+    },
+    "Leprous": {
+        "nils": "\u2665\ufe0f",
+        "tom": "\ud83d\ude2d"
+    },
+    "Lijmpie": {
+        "nils": "\ud83c\udf4b"
+    },
+    "R3v0": {
+        "nils": "\u26fd"
+    },
+    "Disillusion": {
+        "nils": "\u26fd",
+        "eric": "\u2764",
+        "tom": "\u26fd "
+    },
+    "Atlas": {
+        "nils": "\ud83e\uddb4",
+        "thomas": "\u2665\ufe0f",
+        "tom": "\ud83c\udfe1 "
+    },
+    "Azure": {
+        "bas": "\ud83c\udf08"
+    },
+    "GGGOLDDD": {
+        "thomas": "\ud83d\udc4d",
+        "nils": "\ud83e\udd0f"
+    },
+    "Feather Mountain": {
+        "thomas": "\u2764\ufe0f",
+        "nils": ""
+    },
+    "Lucrecia": {
+        "thomas": "\ud83d\ude46"
+    },
+    "Northern Lights": {
+        "thomas": "\ud83d\udc4d"
+    },
+    "Tiberius": {
+        "nils": "\u26fd"
+    },
+    "The CityIsOurs": {
+        "nils": ""
+    },
+    "Earthside": {
+        "nils": "\ud83e\udd0f",
+        "thomas": "\ud83e\udd0f"
+    },
+    "This Will Destroy You": {
+        "nils": "\ud83c\udf7b"
+    },
+    "Sheer Cerebral Power": {
+        "tom": "\ud83d\udca9 ",
+        "nils": ""
+    },
+    "Hypno5e": {
+        "nils": "\ud83c\udf7b"
+    },
+    "Heart of a Coward": {
+        "nils": "\ud83d\udc99"
+    },
+    "The Hirsch Effekt": {
+        "nils": "\u26fd"
+    },
+    "Monosphere": {
+        "nils": "\u2764\ufe0f"
+    },
+    "Primaterra": {
+        "nils": "\u26fd"
+    },
+    "Einar Solberg": {
+        "nils": "\ud83c\udf7b"
+    },
+    "Omnific": {
+        "nils": "\ud83c\udf7b"
+    },
+    "E.N.D.": {
+        "tom": "\ud83d\udca9"
+    },
+    "Ice Sealed Eyes": {
+        "nils": "\u2665\ufe0f"
+    }
 }
