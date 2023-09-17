@@ -2259,7 +2259,7 @@
                     if (b) {
                         var c = b;
                         if (!eH(a, b)) {
-                            if (eI(a)) throw Error(l(418));
+                            if (eI(a)) throw null; //Error(l(418));
                             b = dT(c.nextSibling);
                             var d = eC;
                             b && eH(a, b) ? eG(d, c) : ((a.flags = (-4097 & a.flags) | 2), (eE = !1), (eC = a));
@@ -5822,7 +5822,8 @@
                                     (b.memoizedState = f),
                                     256 & b.flags)
                                 ) {
-                                    (e = gp(Error(l(423)), b)), (b = gK(a, b, d, c, e));
+                                    (null), //e = gp(Error(l(423)), b)),
+                                     (b = gK(a, b, d, c, e));
                                     break a;
                                 }
                                 if (d !== e) {
