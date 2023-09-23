@@ -8,7 +8,14 @@
                     "name": "Voyager",
                     "stage": "1",
                     "day": "sunday",
-                    "review": "Head-headliner? Really?"
+                    "cancelled": true
+                },
+                {
+                    "endTime": "23:15",
+                    "startTime": "21:45",
+                    "name": "Lepr0us",
+                    "stage": "1",
+                    "day": "sunday"
                 },
                 {
                     "endTime": "19:50",

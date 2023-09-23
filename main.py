@@ -148,7 +148,7 @@ def ratings():
                 app.logger.warning(e)
     except FileNotFoundError as e:
         app.logger.warning(e)
-    return render_template('./ratings.html', ratings=ratings)
+    return render_template('./ratings.html', bands=valid_bands, ratings=ratings)
 
 @app.route('/playlist')
 def playlist():

@@ -12,26 +12,30 @@
     <td>tom</td>
     <td>nils</td>
 </tr>
-{% for band, ratings in ratings.items()|sort %}
+{% for band in bands|sort %}
 <tr style="border-bottom: 1pt solid white;">
     <td>
         {{ band }}
     </td>
-    <td>
-        {{ ratings['bas'] }}
-    </td>
-    <td>
-        {{ ratings['eric'] }}
-    </td>
-    <td>
-        {{ ratings['thomas'] }}
-    </td>
-    <td>
-        {{ ratings['tom'] }}
-    </td>
-    <td>
-        {{ ratings['nils'] }}
-    </td>
+    {% if band in ratings %}
+        <td>
+            {{ ratings[band]['bas'] }}
+        </td>
+        <td>
+            {{ ratings[band]['eric'] }}
+        </td>
+        <td>
+            {{ ratings[band]['thomas'] }}
+        </td>
+        <td>
+            {{ ratings[band]['tom'] }}
+        </td>
+        <td>
+            {{ ratings[band]['nils'] }}
+        </td>
+    {% else %}
+        <td></td><td></td><td></td><td></td><td></td>
+    {% endif %}
 </tr>
 {% endfor %}
 </table>
