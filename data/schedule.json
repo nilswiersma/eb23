@@ -18,23 +18,23 @@
                     "day": "sunday"
                 },
                 {
-                    "endTime": "19:50",
+                    "endTime": "19:40",
                     "name": "Sheer Cerebral Power",
                     "day": "friday",
                     "stage": "2",
-                    "startTime": "19:10"
+                    "startTime": "19:00"
                 },
                 {
-                    "startTime": "17:45",
+                    "startTime": "17:40",
                     "stage": "2",
                     "name": "Mankind",
-                    "endTime": "18:15",
+                    "endTime": "18:10",
                     "day": "friday"
                 },
                 {
                     "name": "Omnific",
-                    "endTime": "22:00",
-                    "startTime": "21:15",
+                    "endTime": "21:45",
+                    "startTime": "21:00",
                     "day": "sunday",
                     "stage": "2"
                 },
@@ -46,9 +46,9 @@
                     "stage": "1"
                 },
                 {
-                    "startTime": "18:20",
+                    "startTime": "18:10",
                     "day": "friday",
-                    "endTime": "19:00",
+                    "endTime": "18:50",
                     "name": "GGGOLDDD",
                     "stage": "1"
                 },
@@ -162,7 +162,7 @@
                     "day": "friday",
                     "name": "The Ocean",
                     "startTime": "21:45",
-                    "endTime": "23:15"
+                    "endTime": "23:00"
                 },
                 {
                     "startTime": "19:10",
@@ -179,11 +179,11 @@
                     "name": "Disillusion"
                 },
                 {
-                    "endTime": "20:55",
+                    "endTime": "21:00",
                     "stage": "1",
                     "name": "This Will Destroy You",
                     "day": "friday",
-                    "startTime": "19:55"
+                    "startTime": "19:45"
                 },
                 {
                     "endTime": "17:25",
@@ -196,7 +196,7 @@
                     "startTime": "20:00",
                     "day": "sunday",
                     "name": "Einar Solberg",
-                    "endTime": "20:50",
+                    "endTime": "20:55",
                     "stage": "1"
                 },
                 {
@@ -231,8 +231,8 @@
                     "name": "Ice Sealed Eyes",
                     "day": "friday",
                     "stage": "2",
-                    "endTime": "21:40",
-                    "startTime": "21:00"
+                    "endTime": "21:45",
+                    "startTime": "21:05"
                 },
                 {
                     "name": "Bipolar Architecture",
@@ -242,10 +242,10 @@
                     "startTime": "14:40"
                 },
                 {
-                    "name": "Afterparty: Sentero Luminosu",
+                    "name": "Afterparty: Sentero Luminosu a.k.a. DJ Bob",
                     "day": "friday",
                     "stage": "2",
-                    "endTime": "00:30",
+                    "endTime": "01:00",
                     "startTime": "23:00"
                 },
                 {
@@ -253,7 +253,7 @@
                     "day": "sunday",
                     "stage": "2",
                     "endTime": "02:00",
-                    "startTime": "23:00"
+                    "startTime": "23:15"
                 }
             ]
         }
