@@ -1,3 +1,5 @@
+flask --app hardcoredancing run --debug 
+
 docker run \
     --rm \
     -p 8082:8080 \

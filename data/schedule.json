@@ -3,260 +3,284 @@
         "pageProps": {
             "bands": [
                 {
-                    "endTime": "23:15",
-                    "startTime": "21:45",
-                    "name": "Voyager",
+                    "name": "Anima Tempo",
                     "stage": "1",
-                    "day": "sunday",
-                    "cancelled": true
-                },
-                {
-                    "endTime": "23:15",
-                    "startTime": "21:45",
-                    "name": "Lepr0us",
-                    "stage": "1",
-                    "day": "sunday"
-                },
-                {
-                    "endTime": "19:40",
-                    "name": "Sheer Cerebral Power",
-                    "day": "friday",
-                    "stage": "2",
-                    "startTime": "19:00"
-                },
-                {
-                    "startTime": "17:40",
-                    "stage": "2",
-                    "name": "Mankind",
-                    "endTime": "18:10",
+                    "endTime": "14:35",
+                    "startTime": "14:00",
                     "day": "friday"
                 },
                 {
-                    "name": "Omnific",
-                    "endTime": "21:45",
-                    "startTime": "21:00",
-                    "day": "sunday",
-                    "stage": "2"
-                },
-                {
-                    "startTime": "15:20",
-                    "name": "Feather Mountain",
-                    "day": "saturday",
-                    "endTime": "16:00",
-                    "stage": "1"
-                },
-                {
-                    "startTime": "18:10",
-                    "day": "friday",
-                    "endTime": "18:50",
-                    "name": "GGGOLDDD",
-                    "stage": "1"
-                },
-                {
-                    "name": "Allt",
-                    "stage": "1",
-                    "startTime": "15:20",
-                    "day": "sunday",
-                    "endTime": "16:00"
-                },
-                {
-                    "day": "saturday",
-                    "name": "Leprous",
-                    "startTime": "21:45",
-                    "stage": "1",
-                    "endTime": "23:15"
-                },
-                {
-                    "day": "saturday",
-                    "startTime": "20:55",
-                    "endTime": "21:40",
-                    "name": "The CityIsOurs",
-                    "stage": "2"
-                },
-                {
-                    "day": "saturday",
-                    "endTime": "18:10",
-                    "stage": "2",
-                    "startTime": "17:30",
-                    "name": "Primaterra"
-                },
-                {
-                    "startTime": "19:15",
-                    "endTime": "19:55",
-                    "name": "Playgrounded",
-                    "day": "sunday",
-                    "stage": "2"
-                },
-                {
-                    "day": "sunday",
-                    "startTime": "14:00",
-                    "endTime": "14:35",
-                    "stage": "1",
-                    "name": "Atlas"
-                },
-                {
-                    "endTime": "13:55",
-                    "name": "R3v0",
-                    "stage": "2",
-                    "day": "sunday",
-                    "startTime": "13:20"
-                },
-                {
-                    "day": "saturday",
-                    "startTime": "20:00",
-                    "name": "The Hirsch Effekt",
-                    "stage": "1",
-                    "endTime": "20:50"
-                },
-                {
-                    "day": "sunday",
-                    "stage": "2",
-                    "endTime": "16:40",
-                    "name": "E.N.D.",
-                    "startTime": "16:05"
-                },
-                {
-                    "day": "sunday",
-                    "name": "Future Static",
-                    "stage": "2",
-                    "startTime": "17:30",
-                    "endTime": "18:10"
-                },
-                {
-                    "day": "saturday",
                     "endTime": "01:00",
                     "startTime": "00:15",
-                    "name": "Sextrow",
+                    "name": "As Living Arrows",
+                    "day": "friday",
                     "stage": "2"
                 },
                 {
-                    "startTime": "14:00",
-                    "day": "saturday",
+                    "endTime": "18:05",
+                    "startTime": "17:15",
+                    "name": "Ayahuasca",
                     "stage": "1",
-                    "name": "Lucrecia",
-                    "endTime": "14:35"
+                    "day": "thursday"
+                },
+                {
+                    "stage": "2",
+                    "day": "saturday",
+                    "startTime": "15:05",
+                    "name": "Avalanche Effect",
+                    "endTime": "15:40"
+                },
+                {
+                    "startTime": "18:15",
+                    "name": "Avralize",
+                    "stage": "2",
+                    "day": "thursday",
+                    "endTime": "18:55"
+                },
+                {
+                    "startTime": "20:45",
+                    "endTime": "22:15",
+                    "name": "Caligula's Horse",
+                    "day": "saturday",
+                    "stage": "1"
                 },
                 {
                     "startTime": "23:15",
-                    "day": "saturday",
+                    "name": "Cauldron",
                     "endTime": "00:00",
-                    "name": "Monosphere",
+                    "day": "friday",
                     "stage": "2"
                 },
                 {
-                    "name": "Heart of a Coward",
+                    "startTime": "15:45",
+                    "day": "saturday",
                     "stage": "1",
-                    "endTime": "19:00",
-                    "startTime": "18:15",
-                    "day": "saturday"
+                    "endTime": "16:25",
+                    "name": "Chaosbay"
                 },
                 {
-                    "day": "sunday",
-                    "stage": "1",
-                    "name": "Hypno5e",
-                    "startTime": "16:45",
-                    "endTime": "17:25"
-                },
-                {
-                    "stage": "1",
-                    "day": "friday",
-                    "name": "The Ocean",
-                    "startTime": "21:45",
-                    "endTime": "23:00"
-                },
-                {
-                    "startTime": "19:10",
-                    "name": "A Kews Tag",
-                    "endTime": "19:50",
                     "stage": "2",
-                    "day": "saturday"
+                    "endTime": "19:50",
+                    "name": "Consvumer",
+                    "day": "friday",
+                    "startTime": "19:10"
+                },
+                {
+                    "endTime": "21:40",
+                    "startTime": "20:55",
+                    "day": "friday",
+                    "name": "Defocus",
+                    "stage": "2"
+                },
+                {
+                    "stage": "2",
+                    "day": "friday",
+                    "startTime": "16:05",
+                    "endTime": "16:40",
+                    "name": "Dies in the Sky"
+                },
+                {
+                    "startTime": "23:00",
+                    "endTime": "End of Times",
+                    "name": "ESSIGFABRIK ELECTRO PARTY",
+                    "day": "saturday",
+                    "stage": "2"
                 },
                 {
                     "stage": "1",
-                    "endTime": "17:40",
-                    "startTime": "17:00",
-                    "day": "friday",
-                    "name": "Disillusion"
+                    "day": "saturday",
+                    "name": "EUROBLAST FAMILY PHOTO",
+                    "startTime": "18:01",
+                    "announcement": "true",
+                    "endTime": "18:30"
                 },
                 {
-                    "endTime": "21:00",
+                    "startTime": "16:30",
+                    "day": "saturday",
+                    "endTime": "17:10",
+                    "stage": "2",
+                    "name": "Endgegner"
+                },
+                {
+                    "endTime": "19:30",
                     "stage": "1",
-                    "name": "This Will Destroy You",
+                    "announcement": true,
+                    "name": "FESTIVAL SHOUT OUTS",
                     "day": "friday",
-                    "startTime": "19:45"
+                    "startTime": "19:01"
+                },
+                {
+                    "stage": "1",
+                    "startTime": "18:50",
+                    "endTime": "19:35",
+                    "name": "Floya",
+                    "day": "thursday"
                 },
                 {
                     "endTime": "17:25",
-                    "day": "saturday",
-                    "startTime": "16:45",
+                    "day": "friday",
                     "stage": "1",
-                    "name": "Ghost Iris"
+                    "startTime": "16:45",
+                    "name": "Jakub Zytecki"
+                },
+                {
+                    "day": "friday",
+                    "startTime": "15:20",
+                    "name": "Kardashev",
+                    "stage": "1",
+                    "endTime": "16:00"
+                },
+                {
+                    "startTime": "14:40",
+                    "name": "Kolari",
+                    "endTime": "15:10",
+                    "stage": "2",
+                    "day": "friday"
                 },
                 {
                     "startTime": "20:00",
-                    "day": "sunday",
-                    "name": "Einar Solberg",
-                    "endTime": "20:55",
+                    "endTime": "20:40",
+                    "name": "Kyros",
+                    "day": "saturday",
+                    "stage": "2"
+                },
+                {
+                    "startTime": "19:00",
+                    "endTime": "19:55",
+                    "day": "saturday",
+                    "name": "Mnemic",
                     "stage": "1"
                 },
                 {
+                    "startTime": "18:15",
+                    "endTime": "18:55",
+                    "name": "Naxen",
+                    "stage": "2",
+                    "day": "saturday"
+                },
+                {
+                    "endTime": "23:15",
+                    "startTime": "21:45",
                     "stage": "1",
-                    "day": "sunday",
-                    "endTime": "19:00",
-                    "name": "Earthside",
-                    "startTime": "18:15"
+                    "day": "friday",
+                    "name": "Northlane"
                 },
                 {
-                    "name": "The Sleeper",
-                    "startTime": "16:05",
-                    "endTime": "16:40",
+                    "endTime": "20:50",
+                    "day": "friday",
+                    "name": "Novelists",
+                    "stage": "1",
+                    "startTime": "20:00"
+                },
+                {
+                    "stage": "1",
+                    "announcement": true,
+                    "startTime": "18:06",
+                    "day": "thursday",
+                    "name": "OFFICIAL FESTIVAL WELCOME",
+                    "endTime": "18:30"
+                },
+                {
+                    "day": "saturday",
+                    "name": "OU",
+                    "endTime": "15:00",
+                    "stage": "1",
+                    "startTime": "14:20"
+                },
+                {
+                    "name": "Ophelia Sullivan",
+                    "stage": "1",
+                    "startTime": "15:45",
+                    "endTime": "16:25",
+                    "day": "thursday"
+                },
+                {
                     "stage": "2",
-                    "day": "saturday"
+                    "day": "thursday",
+                    "endTime": "00:00",
+                    "startTime": "23:01",
+                    "name": "Party Session Metal"
                 },
                 {
-                    "name": "Tiberius",
-                    "startTime": "14:40",
-                    "endTime": "15:15",
+                    "day": "saturday",
+                    "endTime": "13:35",
+                    "startTime": "13:00",
+                    "name": "Pridian",
+                    "stage": "1"
+                },
+                {
+                    "name": "Something or Other",
+                    "endTime": "20:40",
+                    "day": "thursday",
                     "stage": "2",
-                    "day": "saturday"
+                    "startTime": "20:00"
                 },
                 {
-                    "name": "Northern Lights",
-                    "startTime": "13:20",
+                    "startTime": "13:40",
+                    "day": "saturday",
+                    "name": "Svynx",
+                    "endTime": "14:15",
+                    "stage": "2"
+                },
+                {
+                    "name": "Trylion",
+                    "startTime": "17:30",
+                    "endTime": "18:10",
+                    "stage": "2",
+                    "day": "friday"
+                },
+                {
+                    "name": "Unprocessed",
+                    "startTime": "20:45",
+                    "stage": "1",
+                    "day": "thursday",
+                    "endTime": "22:15"
+                },
+                {
+                    "startTime": "22:15",
+                    "stage": "2",
+                    "day": "thursday",
+                    "name": "Vertex",
+                    "endTime": "23:00"
+                },
+                {
+                    "endTime": "18:00",
+                    "day": "saturday",
+                    "name": "Vower",
+                    "startTime": "17:15",
+                    "stage": "1"
+                },
+                {
+                    "startTime": "16:30",
+                    "name": "WalzWerk",
+                    "stage": "2",
+                    "day": "thursday",
+                    "endTime": "17:10"
+                },
+                {
                     "endTime": "13:55",
-                    "stage": "2",
-                    "day": "saturday"
-                },
-                {
-                    "name": "Ice Sealed Eyes",
                     "day": "friday",
                     "stage": "2",
-                    "endTime": "21:45",
-                    "startTime": "21:05"
+                    "name": "We Are Perspectives",
+                    "startTime": "13:20"
                 },
                 {
-                    "name": "Bipolar Architecture",
-                    "day": "sunday",
-                    "stage": "2",
-                    "endTime": "15:15",
-                    "startTime": "14:40"
-                },
-                {
-                    "name": "Afterparty: Sentero Luminosu a.k.a. DJ Bob",
-                    "day": "friday",
-                    "stage": "2",
-                    "endTime": "01:00",
-                    "startTime": "23:00"
-                },
-                {
-                    "name": "Afterparty: Remi Gallego",
-                    "day": "sunday",
-                    "stage": "2",
-                    "endTime": "02:00",
-                    "startTime": "23:15"
+                    "endTime": "19:00",
+                    "name": "ten56",
+                    "startTime": "18:15",
+                    "stage": "1",
+                    "day": "friday"
                 }
             ]
-        }
+        },
+        "__N_SSG": true
     },
-    "page": "/"
+    "page": "/",
+    "query": {
+    },
+    "buildId": "fN1qxMf4o06MAuzOc79-i",
+    "isFallback": false,
+    "gsp": true,
+    "scriptLoader": [
+    ]
 }
