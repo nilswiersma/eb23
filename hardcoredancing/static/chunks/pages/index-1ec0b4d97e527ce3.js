@@ -69,7 +69,7 @@ async function post_rating(person, band, rating) {
                         c = new Date();
                     c.setDate(c.getDate() - 1);
                     var d = c.getDay();
-                    return new Date().getHours() >= 0 && 6 >= new Date().getHours() && (b = d), (5 === b && "friday" === a) || (6 === b && "saturday" === a) || (0 === b && "sunday" === a);
+                    return new Date().getHours() >= 0 && 6 >= new Date().getHours() && (b = d), (5 === b && "friday" === a) || (6 === b && "saturday" === a) || (0 === b && "thursday" === a);
                 },
                 k = function (a, b, c) {
                     var d = a.split(":"),
@@ -258,7 +258,7 @@ async function post_rating(person, band, rating) {
                         children: [
                             (0, d.jsx)("div", {
                                 className: t().maxWidthContainer,
-                                children: ["friday", "saturday", "sunday"].map(function (a) {
+                                children: ["thursday", "friday", "saturday"].map(function (a) {
                                     return g(a);
                                 }),
                             }),
@@ -420,7 +420,7 @@ async function post_rating(person, band, rating) {
                             (c = new Date()),
                             c.setDate(c.getDate() - 1),
                             (e = c.getDay()),
-                            (new Date().getHours() >= 0 && 6 >= new Date().getHours() && (b = e), 0 === b) ? "sunday" : 5 === b ? "friday" : 6 === b ? "saturday" : "friday")
+                            (new Date().getHours() >= 0 && 6 >= new Date().getHours() && (b = e), 0 === b) ? "thursday" : 5 === b ? "friday" : 6 === b ? "saturday" : "friday")
                         ),
                         j = i[0],
                         k = i[1],
