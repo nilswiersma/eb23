@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width" />
 <head>
     <link rel="preload" href="static/css/51f481c946f5cddc.css" as="style" />
     <link rel="stylesheet" href="static/css/51f481c946f5cddc.css" data-n-g="" />
@@ -12,7 +13,7 @@
 <body>
     {% for band in bands|sort %}
     {{ band }}<br/>
-    <textarea id="{{ band|replace('&#39', '') }}" style="width: 300px;" id="postConfig" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"' onclick='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{ reviews[band] }}</textarea><br/>
+    <textarea id="{{ band|replace('&#39', '') }}" style="width: 300px; height: 100px;" id="postConfig" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"' onclick='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{ reviews[band] }}</textarea><br/>
     <button id="{{ band }}Button">Post</button><br/>
     <script>
         document.getElementById('{{ band }}Button').addEventListener("click", async () => {
