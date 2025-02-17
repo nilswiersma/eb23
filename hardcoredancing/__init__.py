@@ -156,7 +156,7 @@ def playlist():
     return render_template('./playlist.html')
 
 @app.route('/agenda')
-def playlist():
+def agenda():
     return render_template('./agenda.html')
 
 if __name__ == '__main__':
