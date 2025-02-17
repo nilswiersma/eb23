@@ -155,6 +155,10 @@ def ratings():
 def playlist():
     return render_template('./playlist.html')
 
+@app.route('/agenda')
+def playlist():
+    return render_template('./agenda.html')
+
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
     # app.run()
