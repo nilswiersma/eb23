@@ -3,7 +3,7 @@ import logging
 from flask import Flask, make_response, render_template, request, redirect, url_for, jsonify
 from markupsafe import escape
 
-app = Flask(__name__)
+app = Flask(__name__, subdomain_matching=True)
 
 valid_names = ['bas', 'eric', 'nils', 'thomas', 'tom']
 with open('data/schedule.json', 'r') as f:
