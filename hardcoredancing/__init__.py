@@ -15,6 +15,7 @@ with open('data/schedule.json', 'r') as f:
 def index(name=None):
     app.logger.info('info index')
     app.logger.warning('warning index')
+    app.logger.warning(f'{app.config=}')
     if name and name in valid_names:
         # print(f'{name=}')
         # person = name
