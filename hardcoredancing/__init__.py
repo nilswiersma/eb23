@@ -4,7 +4,7 @@ from flask import Flask, make_response, render_template, request, redirect, url_
 from markupsafe import escape
 
 app = Flask(__name__, subdomain_matching=True)
-app.config['SERVER_NAME'] = 'hardcoredancing.nl:8080'
+#app.config['SERVER_NAME'] = 'hardcoredancing.nl:8080'
 
 valid_names = ['bas', 'eric', 'nils', 'thomas', 'tom']
 with open('data/schedule.json', 'r') as f:
