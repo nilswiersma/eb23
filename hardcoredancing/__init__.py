@@ -155,9 +155,9 @@ def ratings():
 def playlist():
     return render_template('./playlist.html')
 
-@app.route('/agenda')
-@app.route('/', subdomain='agenda')
-def agenda():
+#@app.route('/agenda')
+@app.route('/<page>', subdomain='agenda')
+def agenda(page=None):
     return render_template('./agenda.html')
 
 if __name__ == '__main__':
