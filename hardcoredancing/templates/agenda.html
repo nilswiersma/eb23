@@ -70,7 +70,7 @@
         }
     </style>
     <!-- Add a basic Content Security Policy -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self';">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self';"> -->
 </head>
 <body>
     <h2>Agenda</h2>
@@ -80,7 +80,7 @@
     <script>
         async function fetchCalendar() {
             const response = await fetch('/api/events');
-            const events = await response.json();
+            const events = await response.text();
 
             const eventList = document.getElementById('event-list');
             const showPastButton = document.getElementById('show-past');
