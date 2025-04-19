@@ -3,7 +3,8 @@ import logging
 from flask import Flask, make_response, render_template, request, redirect, url_for, jsonify
 from markupsafe import escape
 
-app = Flask(__name__)
+app = Flask(__name__, subdomain_matching=True)
+app.config['SERVER_NAME'] = 'hardcoredancing.nl:8080'
 
 valid_names = ['bas', 'eric', 'nils', 'thomas', 'tom']
 with open('data/schedule.json', 'r') as f:
@@ -13,6 +14,9 @@ with open('data/schedule.json', 'r') as f:
 @app.route('/')
 @app.route('/<name>')
 def index(name=None):
+    app.logger.info('info index')
+    app.logger.warning('warning index')
+    app.logger.warning(f'{app.config=}')
     if name and name in valid_names:
         # print(f'{name=}')
         # person = name
@@ -155,11 +159,12 @@ def ratings():
 def playlist():
     return render_template('./playlist.html')
 
-@app.route('/agenda')
 @app.route('/', subdomain='agenda')
-def agenda():
+def agenda(page=None):
+    app.logger.warning('agenda handler')
     return render_template('./agenda.html')
 
 if __name__ == '__main__':
+    app.config["SERVER_NAME"] = "hardcoredancing.nl:8080"
     app.run(debug=True, use_reloader=True)
     # app.run()
