@@ -156,6 +156,7 @@ def playlist():
     return render_template('./playlist.html')
 
 @app.route('/agenda')
+@app.route('/', subdomain='agenda')
 def agenda():
     return render_template('./agenda.html')
 
