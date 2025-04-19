@@ -13,6 +13,8 @@ with open('data/schedule.json', 'r') as f:
 @app.route('/')
 @app.route('/<name>')
 def index(name=None):
+    app.logger.info('info index')
+    app.logger.warning('warning index')
     if name and name in valid_names:
         # print(f'{name=}')
         # person = name
