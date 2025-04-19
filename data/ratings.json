@@ -196,5 +196,192 @@
     },
     "Afterparty: Sentero Luminosu a.k.a. DJ Bob": {
         "tom": "\ud83c\udf46"
+    },
+    "Northlane": {
+        "nils": "\u265f\ufe0f",
+        "bas": "\ud83e\udd37\u200d\u2642\ufe0f",
+        "eric": "\ud83e\ude75",
+        "tom": "\ud83d\udc4d\ud83c\udffb",
+        "thomas": "\u2764\ufe0f"
+    },
+    "Unprocessed": {
+        "nils": "\ud83d\udc4d",
+        "tom": "\ud83d\udc9c",
+        "bas": "\ud83d\udc96",
+        "thomas": "\u2764\ufe0f"
+    },
+    "Caligula's Horse": {
+        "nils": "\ud83d\udc0e",
+        "tom": "\ud83d\udd8a\ufe0f\ud83e\uddf1",
+        "bas": "",
+        "thomas": "\ud83d\udc4d"
+    },
+    "Pridian": {
+        "tom": "\u274c",
+        "nils": "\u2764\ufe0f",
+        "bas": "\ud83d\udc4d",
+        "eric": ""
+    },
+    "Svynx": {
+        "tom": "\u274c",
+        "nils": "\u26fd",
+        "bas": "\u26fd",
+        "eric": ""
+    },
+    "OU": {
+        "tom": "\u274c",
+        "bas": "\ud83d\ude42",
+        "eric": "",
+        "thomas": "\ud83d\udc4d"
+    },
+    "Avalanche Effect": {
+        "tom": "\u274c",
+        "bas": "\ud83e\udd37\u200d\u2642\ufe0f",
+        "eric": ""
+    },
+    "Chaosbay": {
+        "tom": "\u2709\ufe0f \ud83c\udf7c",
+        "bas": "\ud83d\udca9",
+        "thomas": "ok"
+    },
+    "Endgegner": {
+        "tom": "\u274c"
+    },
+    "Vower": {
+        "tom": "\u274c",
+        "bas": "\ud83d\udc96",
+        "nils": "",
+        "eric": ""
+    },
+    "Naxen": {
+        "tom": "\u274c",
+        "eric": "\ud83e\udd87",
+        "bas": "\ud83d\udc80"
+    },
+    "Mnemic": {
+        "tom": "\u274c",
+        "bas": "\ud83e\udd37\u200d\u2642\ufe0f"
+    },
+    "Kyros": {
+        "tom": "\u274c",
+        "eric": ""
+    },
+    "WalzWerk": {
+        "tom": "\ud83e\udd69\ud83c\udf36\ufe0f",
+        "bas": "\ud83d\udc68\u200d\ud83d\udcbc"
+    },
+    "Floya": {
+        "tom": "\ud83d\udc9c",
+        "bas": "\ud83e\udd37\u200d\u2642\ufe0f"
+    },
+    "Party Session Metal": {
+        "tom": "\ud83d\udecc",
+        "bas": "\ud83c\udf89"
+    },
+    "Avralize": {
+        "tom": "\ud83d\udc9c",
+        "bas": "\ud83d\udc96",
+        "eric": "\ud83e\ude75",
+        "nils": "\ud83c\udf08",
+        "thomas": "\ud83d\ude03"
+    },
+    "Ophelia Sullivan": {
+        "tom": "\u2757",
+        "bas": "\u2755",
+        "eric": "\ud83d\ude46\u200d\u2642\ufe0f"
+    },
+    "Vertex": {
+        "tom": "\ud83d\ude45"
+    },
+    "Something or Other": {
+        "tom": "\ud83d\ude34 ",
+        "bas": "\ud83d\ude11"
+    },
+    "Novelists": {
+        "tom": "\u2757",
+        "bas": "\ud83d\ude42",
+        "thomas": "\ud83d\udc4d"
+    },
+    "As Living Arrows": {
+        "tom": "\ud83d\udc4e\ud83c\udffb",
+        "bas": "\ud83d\udc96",
+        "eric": "\ud83c\udf7a"
+    },
+    "Cauldron": {
+        "tom": "\ud83d\udc4d\ud83c\udffb",
+        "bas": "\ud83d\udc96"
+    },
+    "Defocus": {
+        "tom": "\ud83d\udc4d\ud83c\udffb",
+        "bas": "\ud83e\udd37\u200d\u2642\ufe0f"
+    },
+    "Consvumer": {
+        "tom": "\ud83d\udc4d\ud83c\udffb",
+        "bas": "\ud83d\udc96",
+        "thomas": "\ud83d\udc4d"
+    },
+    "ten56": {
+        "tom": "\ud83d\udc4d\ud83c\udffb\ud83d\udc4d\ud83c\udffb",
+        "bas": "\ud83d\udc96",
+        "eric": "\ud83d\ude35",
+        "nils": "\u26fd",
+        "thomas": "\ud83e\udd14"
+    },
+    "We Are Perspectives": {
+        "tom": "\ud83d\udc4d\ud83c\udffb",
+        "bas": "",
+        "nils": "\ud83e\udd37"
+    },
+    "Anima Tempo": {
+        "tom": "\ud83c\uddf2\ud83c\uddfd ",
+        "bas": "\ud83d\udca9",
+        "thomas": "\ud83e\udd14"
+    },
+    "Kolari": {
+        "tom": "\u2615 ",
+        "bas": "\ud83d\udc96",
+        "thomas": ""
+    },
+    "Kardashev": {
+        "tom": "\ud83d\ude2d",
+        "eric": "\ud83d\udcab",
+        "bas": "\ud83d\udc4d",
+        "nils": "\ud83d\udc4d",
+        "thomas": "\ud83d\udc4d"
+    },
+    "Jakub Zytecki": {
+        "tom": "\u26fd",
+        "bas": "\u26fd",
+        "eric": "\u26fd\ufe0f",
+        "thomas": "\u26fd"
+    },
+    "Dies in the Sky": {
+        "tom": "\u26fd "
+    },
+    "Trylion": {
+        "tom": "\u26fd ",
+        "eric": "\ud83d\udc4c\ud83c\udffb",
+        "nils": "\ud83d\udc4d",
+        "bas": "\ud83d\udc4d"
+    },
+    "ESSIGFABRIK ELECTRO PARTY": {
+        "tom": "\ud83d\udecf \ud83d\udecf \ud83d\udecf ",
+        "bas": "\ud83d\udc8a"
+    },
+    "EUROBLAST FAMILY PHOTO": {
+        "tom": "\ud83d\udc6a ",
+        "bas": "\ud83d\udc68\u200d\ud83d\udc68\u200d\ud83d\udc66\u200d\ud83d\udc66"
+    },
+    "FESTIVAL SHOUT OUTS": {
+        "tom": "\u274c"
+    },
+    "OFFICIAL FESTIVAL WELCOME": {
+        "tom": "\u274c"
+    },
+    "Ayahuasca": {
+        "eric": "\ud83e\udd37\ud83c\udffc\u200d\u2642\ufe0f",
+        "tom": "\ud83e\udd37\ud83c\udffc\u200d\u2642\ufe0f",
+        "bas": "\ud83e\udd37\u200d\u2642\ufe0f",
+        "thomas": "\ud83c\udd97"
     }
 }
