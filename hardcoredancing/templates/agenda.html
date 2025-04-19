@@ -241,14 +241,14 @@ h2 {
                     hasPastEvents = true;
                 }
 
-                group.innerHTML = `<h3>${date}</h3>`;
+                const groupHeader = document.createElement('h3');
+                groupHeader.textContent = date; // Use textContent to prevent XSS
+                group.appendChild(groupHeader);
                 
                 groupedEvents[date].forEach(event => {
                     let eventItem = document.createElement("div");
-                    eventItem.className = "event";
-                    eventItem.innerHTML = `
-                        <div class="title">${event.title}</div>
-                    `;
+                    eventItem.className = "event title";
+                    eventItem.textContent = event.title;
                     group.appendChild(eventItem);
                 });
 
