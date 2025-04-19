@@ -14,9 +14,9 @@ with open('data/schedule.json', 'r') as f:
 @app.route('/')
 @app.route('/<name>')
 def index(name=None):
-    app.logger.info('info index')
-    app.logger.warning('warning index')
-    app.logger.warning(f'{app.config=}')
+    # app.logger.info('info index')
+    # app.logger.warning('warning index')
+    # app.logger.warning(f'{app.config=}')
     if name and name in valid_names:
         # print(f'{name=}')
         # person = name
@@ -161,7 +161,7 @@ def playlist():
 
 @app.route('/', subdomain='agenda')
 def agenda(page=None):
-    app.logger.warning('agenda handler')
+    # app.logger.warning('agenda handler')
     return render_template('./agenda.html')
 
 if __name__ == '__main__':
