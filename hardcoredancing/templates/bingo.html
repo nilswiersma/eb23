@@ -53,10 +53,17 @@
         <!-- 5x5 = 25 cells -->
         {% for row in range(5) %}
             {% for col in range(5) %}
-                {% set tile_index = 5*row + col %}
-                {% set bingo_index = bingo['order'][tile_index] %}
-                {% set bingo_state = bingo['state'][tile_index] %}
-                {% set bingo_img = 'bingo-%02d.png' % bingo_index %}
+                {% if bingo %}
+                    {% set tile_index = 5*row + col %}
+                    {% set bingo_index = bingo['order'][tile_index] %}
+                    {% set bingo_state = bingo['state'][tile_index] %}
+                    {% set bingo_img = 'bingo-%02d.png' % bingo_index %}
+                {% else %}
+                    {% set tile_index = 0 %}
+                    {% set bingo_index = 0 %}
+                    {% set bingo_state = false %}
+                    {% set bingo_img = 'bingo-00.png' %}
+                {% endif %}
                 <div class="bingo-cell" tile_index="{{ tile_index }}" bingo_index="{{ bingo_index }}" bingo_state={{ 1 if bingo_state else 0 }}>
                     <img src="{{ url_for('static', filename=bingo_img) }}" alt="{{ bingo_img }}">
                 </div>
@@ -111,25 +118,30 @@ function bingoOnClick(event) {
     const tileIndex = Number(cell.attributes['tile_index'].value);
     const newState = !state;
 
-    fetch("/stamp", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-            "person": person,
-            "tile_index": tileIndex,
-            "state": newState,
-        })
-    }).then(resp => {
-        return resp.text();
-    }).then(resp => {
-        console.log(resp);
-        if (resp == 'ok') {
-            cell.attributes['bingo_state'].value = newState ? '1' : '0';
-            updateBingoState(cell);
-        }
-    });
+    if (person) {
+        fetch("/stamp", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                "person": person,
+                "tile_index": tileIndex,
+                "state": newState,
+            })
+        }).then(resp => {
+            return resp.text();
+        }).then(resp => {
+            console.log(resp);
+            if (resp == 'ok') {
+                cell.attributes['bingo_state'].value = newState ? '1' : '0';
+                updateBingoState(cell);
+            }
+        });
+    } else {
+        cell.attributes['bingo_state'].value = newState ? '1' : '0';
+        updateBingoState(cell);
+    }
 }
 
 window.addEventListener('load', async () => {

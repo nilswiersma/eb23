@@ -179,7 +179,7 @@ def stamp():
         return 'nok1'
     if not isinstance(stamp['tile_index'], int):
         return 'nok2'
-    if stamp['person'] not in valid_names:
+    if not stamp.get('person', None) or stamp['person'] not in valid_names:
         return 'nok3'
     if not (0 <= stamp['tile_index'] < 25):
         return 'nok4'
