@@ -37,16 +37,20 @@
 <body>
     <div class="spotify" style="font-size: x-large;">
         <p>
-            <a rel="noopener noreferrer" href="{{ url_for('ratings') }}">
-                💕
-            </a>
-            &nbsp;&nbsp;
             <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/playlist/4U8VggISO2q6ciE1Sb1NEV?si=fe44cd9438bd4694" >
                 <img src="static/spotify.png" alt="playlist" height=25></img>
             </a>
             &nbsp;&nbsp;
+            <a rel="noopener noreferrer" href="{{ url_for('ratings') }}">
+                💕
+            </a>
+            &nbsp;&nbsp;
             <a rel="noopener noreferrer" href="{{ url_for('reviews') }}">
                 📜
+            </a>
+            &nbsp;&nbsp;
+            <a rel="noopener noreferrer" href="{{ url_for('bingo') }}">
+                🎱
             </a>
         </p>
     </div>

@@ -62,7 +62,9 @@
                 </div>
             {% endfor %}
         {% endfor %}
+        <div id="person"></div>
     </div>
+
 </body>
 </html>
 
@@ -128,17 +130,6 @@ function bingoOnClick(event) {
             updateBingoState(cell);
         }
     });
-
-
-
-    // // Send the updated state to the server
-    // fetch('/bingo/update', {
-    //     method: 'POST',
-    //     headers: {
-    //         'Content-Type': 'application/json'
-    //     },
-    //     body: JSON.stringify({ tile_index: tileIndex, bingo_index: bingoIndex, state: newState })
-    // });
 }
 
 window.addEventListener('load', async () => {
@@ -158,5 +149,8 @@ window.addEventListener('load', async () => {
         updateBingoState(cell);
         cell.onclick = bingoOnClick;
     });
+
+    let person = document.cookie.split('=')[1];
+    document.querySelector('#person').textContent = person;
 });
 </script>
