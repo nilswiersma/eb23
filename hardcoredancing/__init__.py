@@ -171,9 +171,44 @@ def agenda(page=None):
     # app.logger.warning('agenda handler')
     return render_template('./agenda.html')
 
+@app.route('/stamp', methods=["POST"])
+def stamp():
+    stamp = request.get_json()
+
+    if not isinstance(stamp['state'], bool):
+        return 'nok1'
+    if not isinstance(stamp['tile_index'], int):
+        return 'nok2'
+    if stamp['person'] not in valid_names:
+        return 'nok3'
+    if not (0 <= stamp['tile_index'] < 25):
+        return 'nok4'
+
+    # TODO add file lock
+    bingo = {}
+    try:
+        with open('data/bingo.json', 'r') as f:
+            try:
+                bingo = json.load(f)
+            except json.decoder.JSONDecodeError as e:
+                app.logger.warning(e)
+    except FileNotFoundError as e:
+        app.logger.warning(e)
+
+    _ = bingo[stamp['person']]
+    _ = bingo[stamp['person']]['state'][stamp['tile_index']]
+    bingo[stamp['person']]['state'][stamp['tile_index']] = stamp['state']
+
+    with open('data/bingo.json', 'w') as f:
+        json.dump(bingo, f, indent=4)
+    
+    return 'ok'
+
+
 @app.route('/bingo')
 # @app.route('/', subdomain='bingo')
 def bingo(page=None):
+    #TODO add file lock
     bingo = {}
     try:
         with open('data/bingo.json', 'r') as f:
@@ -195,8 +230,14 @@ def bingo(page=None):
                 'order': tiles,
                 'state': [False] * 25,
             }
+            with open('data/bingo.json', 'w') as f:
+                json.dump(bingo, f, indent=4)
 
-    return render_template('./bingo.html')
+    name = request.cookies.get('name', None)
+    if name not in valid_names:
+        return render_template('./bingo.html', bingo=None)
+    else:
+        return render_template('./bingo.html', bingo=bingo[name])
 
 if __name__ == '__main__':
     app.config["SERVER_NAME"] = "hardcoredancing.nl:8080"

@@ -11,6 +11,8 @@
         }
         body {
             height: 100vh;
+            width: 100vw;
+            margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -18,21 +20,31 @@
         }
         .bingo-grid {
             display: grid;
-            grid-template-columns: repeat(5, 50px);
-            grid-template-rows: repeat(5, 50px);
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 1fr);
             gap: 4px;
             background: #fff;
-            padding: 16px;
+            padding: 2vw;
             border-radius: 12px;
             box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            width: 90vmin;
+            height: 90vmin;
+            max-width: 98vw;
+            max-height: 98vh;
+            aspect-ratio: 1 / 1;
         }
         .bingo-cell img {
-            width: 48px;
-            height: 48px;
+            width: 100%;
+            height: 100%;
             display: block;
             object-fit: cover;
             border-radius: 6px;
             background: #e0e0e0;
+        }
+        .bingo-cell {
+            position: relative;
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
@@ -41,8 +53,12 @@
         <!-- 5x5 = 25 cells -->
         {% for row in range(5) %}
             {% for col in range(5) %}
-                <div class="bingo-cell">
-                    <img src="{{ url_for('static', filename='bingo-%02d.png' % (5*row+col,)) }}" alt="{{ '%02d' % (5*row+col,) }}">
+                {% set tile_index = 5*row + col %}
+                {% set bingo_index = bingo['order'][tile_index] %}
+                {% set bingo_state = bingo['state'][tile_index] %}
+                {% set bingo_img = 'bingo-%02d.png' % bingo_index %}
+                <div class="bingo-cell" tile_index="{{ tile_index }}" bingo_index="{{ bingo_index }}" bingo_state={{ 1 if bingo_state else 0 }}>
+                    <img src="{{ url_for('static', filename=bingo_img) }}" alt="{{ bingo_img }}">
                 </div>
             {% endfor %}
         {% endfor %}
@@ -51,24 +67,96 @@
 </html>
 
 <script>
+
+async function post_bingo_stamp(person, band, rating) {
+    console.log(person + " rates " + band + " with " + rating);
+
+    await fetch("/rate", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            "person": person,
+            "band": band,
+            "rating": rating,
+        })
+    }).then(resp => {
+        return resp.text();
+    }).then(resp => {
+        console.log(resp);
+        if (resp == 'ok') {
+            location.reload();
+        }
+    });
+}
+
+function updateBingoState(cell) {
+    let state = Boolean(Number(cell.attributes['bingo_state'].textContent));
+    if (cell) {
+        const stamp = cell.querySelector('.bingo-stamp');
+        console.log(stamp);
+        if (stamp) {
+            stamp.style.display = state ? 'block' : 'none';
+        }
+    }
+}
+
+function bingoOnClick(event) {
+    const person = document.cookie.split('=')[1];
+    const cell = event.currentTarget;
+    const state = Boolean(Number(cell.attributes['bingo_state'].textContent));
+    const tileIndex = Number(cell.attributes['tile_index'].value);
+    const newState = !state;
+
+    fetch("/stamp", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            "person": person,
+            "tile_index": tileIndex,
+            "state": newState,
+        })
+    }).then(resp => {
+        return resp.text();
+    }).then(resp => {
+        console.log(resp);
+        if (resp == 'ok') {
+            cell.attributes['bingo_state'].value = newState ? '1' : '0';
+            updateBingoState(cell);
+        }
+    });
+
+
+
+    // // Send the updated state to the server
+    // fetch('/bingo/update', {
+    //     method: 'POST',
+    //     headers: {
+    //         'Content-Type': 'application/json'
+    //     },
+    //     body: JSON.stringify({ tile_index: tileIndex, bingo_index: bingoIndex, state: newState })
+    // });
+}
+
 window.addEventListener('load', async () => {
     document.querySelectorAll('.bingo-cell').forEach(cell => {
         const stamp = document.createElement('img');
+        stamp.className = 'bingo-stamp';
         stamp.src = "{{ url_for('static', filename='bingo.png') }}";
         stamp.alt = 'BINGO';
         stamp.style.position = 'absolute';
         stamp.style.top = '0';
         stamp.style.left = '0';
-        stamp.style.width = '48px';
-        stamp.style.height = '48px';
         stamp.style.opacity = '0.5';
         stamp.style.pointerEvents = 'none';
         stamp.style.display = 'none';
         cell.style.position = 'relative';
         cell.appendChild(stamp);
-        cell.addEventListener('click', () => {
-            stamp.style.display = stamp.style.display === 'none' ? 'block' : 'none';
-        });
+        updateBingoState(cell);
+        cell.onclick = bingoOnClick;
     });
 });
 </script>
