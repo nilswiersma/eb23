@@ -4,7 +4,7 @@ from flask import Flask, make_response, render_template, request, redirect, url_
 from markupsafe import escape
 
 app = Flask(__name__, subdomain_matching=True)
-app.config['SERVER_NAME'] = 'hardcoredancing.nl'
+# app.config['SERVER_NAME'] = 'hardcoredancing.nl'
 
 valid_names = ['bas', 'eric', 'nils', 'thomas', 'tom']
 with open('data/schedule.json', 'r') as f:
@@ -14,12 +14,8 @@ with open('data/schedule.json', 'r') as f:
 @app.route('/')
 @app.route('/<name>')
 def index(name=None):
-    # app.logger.info('info index')
-    # app.logger.warning('warning index')
     # app.logger.warning(f'{app.config=}')
     if name and name in valid_names:
-        # print(f'{name=}')
-        # person = name
         pass
     elif not name:
         name = request.cookies.get('name', None)
@@ -153,7 +149,17 @@ def ratings():
     except FileNotFoundError as e:
         app.logger.warning(e)
 
-    return render_template('./ratings.html', bands=valid_bands, ratings=ratings)
+    reviews = {}
+    try:
+        with open('data/reviews.json', 'r') as f:
+            try:
+                reviews = json.load(f)
+            except json.decoder.JSONDecodeError as e:
+                app.logger.warning(e)
+    except FileNotFoundError as e:
+        app.logger.warning(e)
+
+    return render_template('./ratings.html', bands=valid_bands, ratings=ratings, reviews=reviews)
 
 @app.route('/playlist')
 def playlist():

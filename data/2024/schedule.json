@@ -3,92 +3,92 @@
         "pageProps": {
             "bands": [
                 {
-                    "name": "Abbie Falls",
+                    "name": "Anima Tempo",
                     "stage": "1",
                     "endTime": "14:35",
                     "startTime": "14:00",
-                    "day": "saturday"
+                    "day": "friday"
                 },
                 {
                     "endTime": "01:00",
                     "startTime": "00:15",
-                    "name": "TBA115",
-                    "day": "saturday",
+                    "name": "As Living Arrows",
+                    "day": "friday",
                     "stage": "2"
                 },
                 {
                     "endTime": "18:05",
                     "startTime": "17:15",
-                    "name": "Dvne",
+                    "name": "Ayahuasca",
                     "stage": "1",
-                    "day": "friday"
+                    "day": "thursday"
                 },
                 {
                     "stage": "2",
-                    "day": "sunday",
+                    "day": "saturday",
                     "startTime": "15:05",
-                    "name": "Second Horizon",
+                    "name": "Avalanche Effect",
                     "endTime": "15:40"
                 },
                 {
                     "startTime": "18:15",
-                    "name": "Royal Sorrow",
+                    "name": "Avralize",
                     "stage": "2",
-                    "day": "friday",
+                    "day": "thursday",
                     "endTime": "18:55"
                 },
                 {
                     "startTime": "20:45",
                     "endTime": "22:15",
-                    "name": "Tesseract",
-                    "day": "sunday",
+                    "name": "Caligula's Horse",
+                    "day": "saturday",
                     "stage": "1"
                 },
                 {
                     "startTime": "23:15",
-                    "name": "TBA113",
+                    "name": "Cauldron",
                     "endTime": "00:00",
-                    "day": "saturday",
+                    "day": "friday",
                     "stage": "2"
                 },
                 {
                     "startTime": "15:45",
-                    "day": "sunday",
+                    "day": "saturday",
                     "stage": "1",
                     "endTime": "16:25",
-                    "name": "Ron Minis"
+                    "name": "Chaosbay"
                 },
                 {
                     "stage": "2",
                     "endTime": "19:50",
-                    "name": "vianova",
-                    "day": "saturday",
+                    "name": "Consvumer",
+                    "day": "friday",
                     "startTime": "19:10"
                 },
                 {
                     "endTime": "21:40",
                     "startTime": "20:55",
-                    "day": "saturday",
-                    "name": "Walkways",
+                    "day": "friday",
+                    "name": "Defocus",
                     "stage": "2"
                 },
                 {
                     "stage": "2",
-                    "day": "saturday",
+                    "day": "friday",
                     "startTime": "16:05",
                     "endTime": "16:40",
-                    "name": "Cevret"
+                    "name": "Dies in the Sky"
                 },
                 {
                     "startTime": "23:00",
                     "endTime": "End of Times",
-                    "name": "TBA211",
-                    "day": "sunday",
+                    "name": "ESSIGFABRIK ELECTRO PARTY",
+                    "day": "saturday",
                     "stage": "2"
                 },
                 {
                     "stage": "1",
-                    "day": "sunday",
+                    "day": "saturday",
                     "name": "EUROBLAST FAMILY PHOTO",
                     "startTime": "18:01",
                     "announcement": "true",
@@ -96,79 +96,79 @@
                 },
                 {
                     "startTime": "16:30",
-                    "day": "sunday",
+                    "day": "saturday",
                     "endTime": "17:10",
                     "stage": "2",
-                    "name": "Sunborn"
+                    "name": "Endgegner"
                 },
                 {
                     "endTime": "19:30",
                     "stage": "1",
                     "announcement": true,
                     "name": "FESTIVAL SHOUT OUTS",
-                    "day": "saturday",
+                    "day": "friday",
                     "startTime": "19:01"
                 },
                 {
                     "stage": "1",
                     "startTime": "18:50",
                     "endTime": "19:35",
-                    "name": "Intervals",
-                    "day": "friday"
+                    "name": "Floya",
+                    "day": "thursday"
                 },
                 {
                     "endTime": "17:25",
-                    "day": "saturday",
+                    "day": "friday",
                     "stage": "1",
                     "startTime": "16:45",
-                    "name": "No Oath"
+                    "name": "Jakub Zytecki"
                 },
                 {
-                    "day": "saturday",
+                    "day": "friday",
                     "startTime": "15:20",
-                    "name": "Dream State",
+                    "name": "Kardashev",
                     "stage": "1",
                     "endTime": "16:00"
                 },
                 {
                     "startTime": "14:40",
-                    "name": "TBA003",
+                    "name": "Kolari",
                     "endTime": "15:10",
                     "stage": "2",
-                    "day": "saturday"
+                    "day": "friday"
                 },
                 {
                     "startTime": "20:00",
                     "endTime": "20:40",
-                    "name": "Baikal",
-                    "day": "sunday",
+                    "name": "Kyros",
+                    "day": "saturday",
                     "stage": "2"
                 },
                 {
                     "startTime": "19:00",
                     "endTime": "19:55",
-                    "day": "sunday",
-                    "name": "The Dear Hunter",
+                    "day": "saturday",
+                    "name": "Mnemic",
                     "stage": "1"
                 },
                 {
                     "startTime": "18:15",
                     "endTime": "18:55",
-                    "name": "Isbjörg",
+                    "name": "Naxen",
                     "stage": "2",
-                    "day": "sunday"
+                    "day": "saturday"
                 },
                 {
                     "endTime": "23:15",
                     "startTime": "21:45",
                     "stage": "1",
-                    "day": "saturday",
-                    "name": "Haken"
+                    "day": "friday",
+                    "name": "Northlane"
                 },
                 {
                     "endTime": "20:50",
-                    "day": "saturday",
-                    "name": "Voyager",
+                    "day": "friday",
+                    "name": "Novelists",
                     "stage": "1",
                     "startTime": "20:00"
                 },
@@ -176,100 +176,100 @@
                     "stage": "1",
                     "announcement": true,
                     "startTime": "18:06",
-                    "day": "friday",
+                    "day": "thursday",
                     "name": "OFFICIAL FESTIVAL WELCOME",
                     "endTime": "18:30"
                 },
                 {
-                    "day": "sunday",
-                    "name": "Benthos",
+                    "day": "saturday",
+                    "name": "OU",
                     "endTime": "15:00",
                     "stage": "1",
                     "startTime": "14:20"
                 },
                 {
-                    "name": "The Intersphere",
+                    "name": "Ophelia Sullivan",
                     "stage": "1",
                     "startTime": "15:45",
                     "endTime": "16:25",
-                    "day": "friday"
+                    "day": "thursday"
                 },
                 {
                     "stage": "2",
-                    "day": "friday",
+                    "day": "thursday",
                     "endTime": "00:00",
                     "startTime": "23:01",
-                    "name": "TBA009"
+                    "name": "Party Session Metal"
                 },
                 {
-                    "day": "sunday",
+                    "day": "saturday",
                     "endTime": "13:35",
                     "startTime": "13:00",
-                    "name": "TBA200",
+                    "name": "Pridian",
                     "stage": "1"
                 },
                 {
-                    "name": "Distant Dream",
+                    "name": "Something or Other",
                     "endTime": "20:40",
-                    "day": "friday",
+                    "day": "thursday",
                     "stage": "2",
                     "startTime": "20:00"
                 },
                 {
                     "startTime": "13:40",
-                    "day": "sunday",
-                    "name": "TBA201",
+                    "day": "saturday",
+                    "name": "Svynx",
                     "endTime": "14:15",
                     "stage": "2"
                 },
                 {
-                    "name": "The Broken Horizon",
+                    "name": "Trylion",
                     "startTime": "17:30",
                     "endTime": "18:10",
                     "stage": "2",
-                    "day": "saturday"
+                    "day": "friday"
                 },
                 {
-                    "name": "Night Verses",
+                    "name": "Unprocessed",
                     "startTime": "20:45",
                     "stage": "1",
-                    "day": "friday",
+                    "day": "thursday",
                     "endTime": "22:15"
                 },
                 {
                     "startTime": "22:15",
                     "stage": "2",
-                    "day": "friday",
-                    "name": "TBA008",
+                    "day": "thursday",
+                    "name": "Vertex",
                     "endTime": "23:00"
                 },
                 {
                     "endTime": "18:00",
-                    "day": "sunday",
-                    "name": "Esoterica",
+                    "day": "saturday",
+                    "name": "Vower",
                     "startTime": "17:15",
                     "stage": "1"
                 },
                 {
                     "startTime": "16:30",
-                    "name": "Burden to Atlas",
+                    "name": "WalzWerk",
                     "stage": "2",
-                    "day": "friday",
+                    "day": "thursday",
                     "endTime": "17:10"
                 },
                 {
                     "endTime": "13:55",
-                    "day": "saturday",
+                    "day": "friday",
                     "stage": "2",
-                    "name": "TBA101",
+                    "name": "We Are Perspectives",
                     "startTime": "13:20"
                 },
                 {
                     "endTime": "19:00",
-                    "name": "NECROTTED",
+                    "name": "ten56",
                     "startTime": "18:15",
                     "stage": "1",
-                    "day": "saturday"
+                    "day": "friday"
                 }
             ]
         },

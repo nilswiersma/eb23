@@ -258,7 +258,7 @@ async function post_rating(person, band, rating) {
                         children: [
                             (0, d.jsx)("div", {
                                 className: t().maxWidthContainer,
-                                children: ["thursday", "friday", "saturday"].map(function (a) {
+                                children: ["friday", "saturday", "sunday"].map(function (a) {
                                     return g(a);
                                 }),
                             }),
