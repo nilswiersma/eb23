@@ -57,13 +57,12 @@
                     {% set tile_index = 5*row + col %}
                     {% set bingo_index = bingo['order'][tile_index] %}
                     {% set bingo_state = bingo['state'][tile_index] %}
-                    {% set bingo_img = 'bingo-%02d.png' % bingo_index %}
                 {% else %}
-                    {% set tile_index = 0 %}
-                    {% set bingo_index = 0 %}
+                    {% set tile_index = 5*row + col %}
+                    {% set bingo_index = tile_index %}
                     {% set bingo_state = false %}
-                    {% set bingo_img = 'bingo-00.png' %}
                 {% endif %}
+                {% set bingo_img = 'bingo-%02d.png' % bingo_index %}
                 <div class="bingo-cell" tile_index="{{ tile_index }}" bingo_index="{{ bingo_index }}" bingo_state={{ 1 if bingo_state else 0 }}>
                     <img src="{{ url_for('static', filename=bingo_img) }}" alt="{{ bingo_img }}">
                 </div>
