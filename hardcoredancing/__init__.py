@@ -1,10 +1,11 @@
 import json
 import logging
+import random
 from flask import Flask, make_response, render_template, request, redirect, url_for, jsonify
 from markupsafe import escape
 
 app = Flask(__name__, subdomain_matching=True)
-app.config['SERVER_NAME'] = 'hardcoredancing.nl'
+# app.config['SERVER_NAME'] = 'hardcoredancing.nl'
 
 valid_names = ['bas', 'eric', 'nils', 'thomas', 'tom']
 with open('data/schedule.json', 'r') as f:
@@ -169,6 +170,33 @@ def playlist():
 def agenda(page=None):
     # app.logger.warning('agenda handler')
     return render_template('./agenda.html')
+
+@app.route('/bingo')
+# @app.route('/', subdomain='bingo')
+def bingo(page=None):
+    bingo = {}
+    try:
+        with open('data/bingo.json', 'r') as f:
+            try:
+                bingo = json.load(f)
+            except json.decoder.JSONDecodeError as e:
+                app.logger.warning(e)
+    except FileNotFoundError as e:
+        app.logger.warning(e)
+    
+    for name in valid_names:
+        if name not in bingo:
+            tiles0 = list(range(12))
+            tiles1 = list(range(13, 25))
+            random.shuffle(tiles0)
+            random.shuffle(tiles1)
+            tiles = tiles0 + [12] + tiles1
+            bingo[name] = {
+                'order': tiles,
+                'state': [False] * 25,
+            }
+
+    return render_template('./bingo.html')
 
 if __name__ == '__main__':
     app.config["SERVER_NAME"] = "hardcoredancing.nl:8080"
