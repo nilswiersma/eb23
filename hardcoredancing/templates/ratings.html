@@ -74,7 +74,8 @@
 </tr>
 {% endfor %}
 </table>
-<div id="person"></div>
+<br/>
+<div id="person" align="center"></div>
 </div>
 
 <script>
@@ -112,12 +113,12 @@ function rating_click_handler(element) {
         post_rating(person, bandName, rating);
     } else {
         alert(bandName + "\n------\n" + bandReview);
-        // alert(a.band.name + "\n------\n" + a.band.review);
     }
 };
 
 window.addEventListener('load', async () => {
-    console.log('hello world');
+    let person = document.cookie.split('=')[1];
+    document.querySelector('#person').textContent = person;
     document.querySelectorAll('.bandcell').forEach(element => {
         element.onclick = rating_click_handler;
     });
