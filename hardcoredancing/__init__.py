@@ -218,16 +218,23 @@ def bingo(page=None):
                 app.logger.warning(e)
     except FileNotFoundError as e:
         app.logger.warning(e)
+
+    try:
+        with open('data/bingo-bands.json', 'r') as f:
+            try:
+                bingo_bands = json.load(f)
+            except json.decoder.JSONDecodeError as e:
+                app.logger.warning(e)
+    except FileNotFoundError as e:
+        app.logger.warning(e)
+    
     
     for name in valid_names:
+        # generate a new bingo card
         if name not in bingo:
-            tiles0 = list(range(12))
-            tiles1 = list(range(13, 25))
-            random.shuffle(tiles0)
-            random.shuffle(tiles1)
-            tiles = tiles0 + [12] + tiles1
+            tiles = random.sample(bingo_bands, k=12) + ['yuroblast'] + random.sample(bingo_bands, k=12)
             bingo[name] = {
-                'order': tiles,
+                'bandname': tiles,
                 'state': [False] * 25,
             }
             with open('data/bingo.json', 'w') as f:

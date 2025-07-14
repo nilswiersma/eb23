@@ -44,6 +44,17 @@
         .bingo-cell {
             position: relative;
             width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: clamp(0.7vw, 2.5vmin, 2.2vw);
+            overflow: hidden;
+            white-space: normal;
+            word-break: break-word;
+            user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
             height: 100%;
         }
     </style>
@@ -55,17 +66,20 @@
             {% for col in range(5) %}
                 {% if bingo %}
                     {% set tile_index = 5*row + col %}
-                    {% set bingo_index = bingo['order'][tile_index] %}
+                    {% set bandname = bingo['bandname'][tile_index] %}
                     {% set bingo_state = bingo['state'][tile_index] %}
                 {% else %}
                     {% set tile_index = 5*row + col %}
-                    {% set bingo_index = tile_index %}
+                    {% set bandname = tile_index %}
                     {% set bingo_state = false %}
                 {% endif %}
-                {% set bingo_img = 'bingo-%02d.png' % bingo_index %}
-                <div class="bingo-cell" tile_index="{{ tile_index }}" bingo_index="{{ bingo_index }}" bingo_state={{ 1 if bingo_state else 0 }}>
-                    <img src="{{ url_for('static', filename=bingo_img) }}" alt="{{ bingo_img }}">
-                </div>
+                <div class="bingo-cell" tile_index="{{ tile_index }}" bandname="{{ bandname }}" bingo_state={{ 1 if bingo_state else 0 }}>
+                {% if tile_index == 12 %}
+                    <img src="{{ url_for('static', filename='bingo-12.png') }}" alt="{{ bingo_img }}">
+                {% else %}
+                    {{ bandname }}
+                {% endif %}  
+                </div>                  
             {% endfor %}
         {% endfor %}
         <div id="person"></div>
