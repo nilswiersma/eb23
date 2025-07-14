@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bingo Grid</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f8f8f8;
+        }
+        .bingo-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 50px);
+            grid-template-rows: repeat(5, 50px);
+            gap: 4px;
+            background: #fff;
+            padding: 16px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+        .bingo-cell img {
+            width: 48px;
+            height: 48px;
+            display: block;
+            object-fit: cover;
+            border-radius: 6px;
+            background: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="bingo-grid">
+        <!-- 5x5 = 25 cells -->
+        {% for row in range(5) %}
+            {% for col in range(5) %}
+                <div class="bingo-cell">
+                    <img src="{{ url_for('static', filename='bingo-%02d.png' % (5*row+col,)) }}" alt="{{ '%02d' % (5*row+col,) }}">
+                </div>
+            {% endfor %}
+        {% endfor %}
+    </div>
+</body>
+</html>
+
+<script>
+window.addEventListener('load', async () => {
+    document.querySelectorAll('.bingo-cell').forEach(cell => {
+        const stamp = document.createElement('img');
+        stamp.src = "{{ url_for('static', filename='bingo.png') }}";
+        stamp.alt = 'BINGO';
+        stamp.style.position = 'absolute';
+        stamp.style.top = '0';
+        stamp.style.left = '0';
+        stamp.style.width = '48px';
+        stamp.style.height = '48px';
+        stamp.style.opacity = '0.5';
+        stamp.style.pointerEvents = 'none';
+        stamp.style.display = 'none';
+        cell.style.position = 'relative';
+        cell.appendChild(stamp);
+        cell.addEventListener('click', () => {
+            stamp.style.display = stamp.style.display === 'none' ? 'block' : 'none';
+        });
+    });
+});
+</script>
