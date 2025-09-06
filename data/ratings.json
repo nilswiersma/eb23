@@ -1,15 +1,146 @@
 {
     "Night Verses": {
-        "nils": "\u2764\ufe0f"
+        "nils": "\u2764\ufe0f",
+        "tom": "\ud83d\udc9c",
+        "bas": "\u2764\ufe0f",
+        "thomas": "\u2665\ufe0f"
     },
     "Tesseract": {
-        "nils": "\u2764\ufe0f"
+        "nils": "\u2764\ufe0f",
+        "tom": "\ud83d\udc9c",
+        "thomas": "\u2764\ufe0f",
+        "bas": "\ud83d\udc50"
     },
     "Abbie Falls": {
-        "eric": ""
+        "eric": "",
+        "thomas": "\u2764\ufe0f",
+        "bas": "",
+        "tom": "\ud83d\udc4d"
     },
     "Voyager": {
         "eric": "",
-        "nils": "\ud83c\udf08"
+        "nils": "\ud83c\udf08",
+        "thomas": "\ud83d\ude42\u200d\u2194\ufe0f",
+        "bas": "\ud83e\udd2e",
+        "tom": "\ud83e\udd98"
+    },
+    "Burden to Atlas": {
+        "tom": "\ud83d\udeab"
+    },
+    "Walkways": {
+        "tom": "\ud83c\uddee\ud83c\uddf1",
+        "thomas": "\ud83d\udc4d",
+        "bas": "\ud83d\udca3"
+    },
+    "Ron Minis": {
+        "tom": "\ud83d\udeab",
+        "nils": "\ud83d\udc4e",
+        "bas": "\ud83c\udfb9"
+    },
+    "No Oath": {
+        "nils": "\u2764\ufe0f",
+        "thomas": "\u2764\ufe0f",
+        "bas": "\u2764\ufe0f",
+        "tom": "\ud83d\udc9c"
+    },
+    "Baikal": {
+        "nils": "\u2764\ufe0f",
+        "bas": "\ud83c\udfda",
+        "tom": "\ud83c\udfd7\ufe0f"
+    },
+    "Dvne": {
+        "thomas": "\ud83d\udc4d",
+        "bas": "\u2764\ufe0f",
+        "tom": "\ud83d\udc9c"
+    },
+    "The Intersphere": {
+        "thomas": "\u2665\ufe0f",
+        "bas": "\u2764\ufe0f",
+        "tom": "\ud83d\udc9c"
+    },
+    "OFFICIAL FESTIVAL WELCOME": {
+        "bas": "\u26fd",
+        "tom": "\u26fd"
+    },
+    "Intervals": {
+        "bas": "\u2764\ufe0f",
+        "tom": "\ud83d\udc4d",
+        "nils": "\ud83e\udd0d"
+    },
+    "Royal Sorrow": {
+        "bas": "\ud83e\udd28",
+        "tom": "\ud83d\udeab"
+    },
+    "The Broken Horizon": {
+        "bas": "\ud83e\udd50",
+        "tom": "\ud83e\udd58"
+    },
+    "vianova": {
+        "bas": "\u2764\ufe0f",
+        "tom": "\ud83d\udc4d"
+    },
+    "NECROTTED": {
+        "bas": "\ud83d\udc80",
+        "tom": "\u26b0\ufe0f"
+    },
+    "Haken": {
+        "bas": "\ud83e\udeb3",
+        "tom": "\ud83d\udc51",
+        "nils": "\ud83d\udc12"
+    },
+    "Esoterica": {
+        "thomas": "\ud83d\udca4",
+        "tom": "\ud83d\udecf\ufe0f",
+        "bas": "\ud83d\ude34"
+    },
+    "Benthos": {
+        "bas": "\u2764\ufe0f",
+        "tom": "\ud83d\udc4d"
+    },
+    "Distant Dream": {
+        "tom": "\ud83d\udeab",
+        "bas": ""
+    },
+    "Sunborn": {
+        "bas": "\ud83e\udd77",
+        "tom": "\ud83e\udea9",
+        "nils": "\ud83e\udd37"
+    },
+    "Isbj\u00f6rg": {
+        "bas": "\ud83c\udfb9",
+        "tom": "\ud83d\udc4d"
+    },
+    "Dream State": {
+        "bas": "\ud83d\ude46\u200d\u2640\ufe0f",
+        "tom": "\ud83d\ude46"
+    },
+    "The Dear Hunter": {
+        "tom": "\ud83c\udff9",
+        "bas": "\ud83e\udd8c"
+    },
+    "Second Horizon": {
+        "bas": "2\ufe0f\u20e3",
+        "tom": "\ud83c\udf05"
+    },
+    "Cevret": {
+        "tom": "\u2753\ud83c\udfa4"
+    },
+    "FESTIVAL SHOUT OUTS": {
+        "tom": "\u26fd"
+    },
+    "EUROBLAST FAMILY PHOTO": {
+        "tom": "\ud83c\udf4b\ud83e\udd67"
+    },
+    "TBA008": {
+        "tom": "\ud83c\udf45\ud83c\udf7a"
+    },
+    "TBA009": {
+        "tom": "\ud83c\udf54"
+    },
+    "TBA101": {
+        "tom": "\ud83c\udf63"
+    },
+    "TBA200": {
+        "tom": "\ud83c\udf63"
     }
 }
