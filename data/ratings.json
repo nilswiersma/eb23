@@ -142,5 +142,12 @@
     },
     "TBA200": {
         "tom": "\ud83c\udf63"
+    },
+    "SENNA": {
+        "nils": "\ud83c\udde7\ud83c\uddf7",
+        "tom": "\ud83d\udc4d"
+    },
+    "Slope": {
+        "tom": "\ud83e\udd37"
     }
 }
