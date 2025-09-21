@@ -40,6 +40,8 @@
     <td style="border-left: 1pt solid white; width: 50px">Th</td>
     <td style="border-left: 1pt solid white; width: 50px">To</td>
     <td style="border-left: 1pt solid white; width: 50px">Ni</td>
+    <td style="border-left: 1pt solid white; width: 50px">La</td>
+    <td style="border-left: 1pt solid white; width: 50px">Ro</td>
 </tr>
 {% for band in bands|sort %}
 <tr style="border-bottom: 1pt solid white;">
@@ -64,12 +66,20 @@
         <td style="border-left: 1pt solid white;">
             {{ ratings[band]['nils'] }}
         </td>
+        <td style="border-left: 1pt solid white;">
+            {{ ratings[band]['laura'] }}
+        </td>
+        <td style="border-left: 1pt solid white;">
+            {{ ratings[band]['rolf'] }}
+        </td>
     {% else %}
         <td style="border-left: 1pt solid white;"></td>
         <td style="border-left: 1pt solid white;"></td>
         <td style="border-left: 1pt solid white;"></td>
         <td style="border-left: 1pt solid white;"></td>
         <td style="border-left: 1pt solid white;"></td>
+        <td style="border-left: 1pt solid white;"></td>
+        <td style="border-left: 1pt solid white;"></td> 
     {% endif %}
 </tr>
 {% endfor %}
