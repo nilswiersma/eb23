@@ -4,21 +4,14 @@
             "bands": [
                 {
                     "name": "Abbie Falls",
-                    "stage": "1",
-                    "endTime": "14:35",
-                    "startTime": "14:00",
+                    "stage": "2",
+                    "endTime": "21:45",
+                    "startTime": "21:00",
                     "day": "saturday"
                 },
                 {
-                    "endTime": "01:00",
-                    "startTime": "00:15",
-                    "name": "TBA115",
-                    "day": "saturday",
-                    "stage": "2"
-                },
-                {
-                    "endTime": "18:05",
-                    "startTime": "17:15",
+                    "startTime": "17:45",
+                    "endTime": "18:45",
                     "name": "Dvne",
                     "stage": "1",
                     "day": "friday"
@@ -31,25 +24,18 @@
                     "endTime": "15:40"
                 },
                 {
-                    "startTime": "18:15",
+                    "startTime": "18:50",
                     "name": "Royal Sorrow",
                     "stage": "2",
                     "day": "friday",
-                    "endTime": "18:55"
+                    "endTime": "19:30"
                 },
                 {
-                    "startTime": "20:45",
-                    "endTime": "22:15",
+                    "startTime": "21:00",
+                    "endTime": "22:30",
                     "name": "Tesseract",
                     "day": "sunday",
                     "stage": "1"
-                },
-                {
-                    "startTime": "23:15",
-                    "name": "TBA113",
-                    "endTime": "00:00",
-                    "day": "saturday",
-                    "stage": "2"
                 },
                 {
                     "startTime": "15:45",
@@ -60,39 +46,39 @@
                 },
                 {
                     "stage": "2",
-                    "endTime": "19:50",
+                    "endTime": "18:10",
                     "name": "SENNA",
                     "day": "saturday",
-                    "startTime": "19:10"
+                    "startTime": "17:30"
                 },
                 {
-                    "endTime": "21:40",
-                    "startTime": "20:55",
+                    "startTime": "15:05",
+                    "endTime": "15:50",
                     "day": "saturday",
                     "name": "Walkways",
-                    "stage": "2"
+                    "stage": "1"
                 },
                 {
                     "stage": "2",
                     "day": "saturday",
-                    "startTime": "16:05",
-                    "endTime": "16:40",
+                    "startTime": "14:20",
+                    "endTime": "15:00",
                     "name": "Cevret"
                 },
                 {
                     "startTime": "23:00",
                     "endTime": "End of Times",
-                    "name": "TBA211",
+                    "name": "Hardcore met Remi",
                     "day": "sunday",
                     "stage": "2"
                 },
                 {
                     "stage": "1",
                     "day": "sunday",
-                    "name": "EUROBLAST FAMILY PHOTO",
-                    "startTime": "18:01",
+                    "name": "EUROBLAST FAMILY PHOTO + EUROBLAST 2026",
+                    "startTime": "19:56",
                     "announcement": "true",
-                    "endTime": "18:30"
+                    "endTime": "20:35"
                 },
                 {
                     "startTime": "16:30",
@@ -102,17 +88,17 @@
                     "name": "Sunborn"
                 },
                 {
-                    "endTime": "19:30",
+                    "endTime": "21:54",
                     "stage": "1",
                     "announcement": true,
                     "name": "FESTIVAL SHOUT OUTS",
                     "day": "saturday",
-                    "startTime": "19:01"
+                    "startTime": "21:40"
                 },
                 {
                     "stage": "1",
-                    "startTime": "18:50",
-                    "endTime": "19:35",
+                    "startTime": "19:35",
+                    "endTime": "20:45",
                     "name": "Intervals",
                     "day": "friday"
                 },
@@ -120,26 +106,19 @@
                     "endTime": "17:25",
                     "day": "saturday",
                     "stage": "1",
-                    "startTime": "16:45",
+                    "startTime": "16:40",
                     "name": "No Oath"
                 },
                 {
                     "day": "saturday",
-                    "startTime": "15:20",
+                    "startTime": "18:15",
                     "name": "Dream State",
                     "stage": "1",
-                    "endTime": "16:00"
+                    "endTime": "19:00"
                 },
                 {
-                    "startTime": "14:40",
-                    "name": "TBA003",
-                    "endTime": "15:10",
-                    "stage": "2",
-                    "day": "saturday"
-                },
-                {
-                    "startTime": "20:00",
-                    "endTime": "20:40",
+                    "startTime": "20:10",
+                    "endTime": "20:55",
                     "name": "Baikal",
                     "day": "sunday",
                     "stage": "2"
@@ -159,26 +138,19 @@
                     "day": "sunday"
                 },
                 {
-                    "endTime": "23:15",
-                    "startTime": "21:45",
-                    "stage": "1",
-                    "day": "saturday",
-                    "name": "Haken"
-                },
-                {
-                    "endTime": "20:50",
+                    "endTime": "23:40",
                     "day": "saturday",
                     "name": "Voyager",
                     "stage": "1",
-                    "startTime": "20:00"
+                    "startTime": "21:55"
                 },
                 {
                     "stage": "1",
                     "announcement": true,
-                    "startTime": "18:06",
+                    "startTime": "21:20",
                     "day": "friday",
                     "name": "OFFICIAL FESTIVAL WELCOME",
-                    "endTime": "18:30"
+                    "endTime": "21:44"
                 },
                 {
                     "day": "sunday",
@@ -190,58 +162,37 @@
                 {
                     "name": "The Intersphere",
                     "stage": "1",
-                    "startTime": "15:45",
-                    "endTime": "16:25",
+                    "startTime": "16:10",
+                    "endTime": "16:55",
                     "day": "friday"
                 },
                 {
-                    "stage": "2",
-                    "day": "friday",
-                    "endTime": "00:00",
-                    "startTime": "23:01",
-                    "name": "TBA009"
-                },
-                {
-                    "day": "sunday",
-                    "endTime": "13:35",
-                    "startTime": "13:00",
-                    "name": "TBA200",
-                    "stage": "1"
-                },
-                {
                     "name": "vianova",
-                    "endTime": "20:40",
+                    "endTime": "23:55",
                     "day": "friday",
                     "stage": "2",
-                    "startTime": "20:00"
-                },
-                {
-                    "startTime": "13:40",
-                    "day": "sunday",
-                    "name": "TBA201",
-                    "endTime": "14:15",
-                    "stage": "2"
+                    "startTime": "23:10"
                 },
                 {
                     "name": "The Broken Horizon",
-                    "startTime": "17:30",
-                    "endTime": "18:10",
+                    "startTime": "15:55",
+                    "endTime": "16:35",
                     "stage": "2",
                     "day": "saturday"
                 },
                 {
                     "name": "Night Verses",
-                    "startTime": "20:45",
+                    "startTime": "21:45",
                     "stage": "1",
                     "day": "friday",
-                    "endTime": "22:15"
+                    "endTime": "23:05"
                 },
                 {
-                    "startTime": "22:15",
+                    "startTime": "20:50",
                     "stage": "2",
                     "day": "friday",
                     "name": "Distant Dream",
-                    "endTime": "23:00"
+                    "endTime": "21:35"
                 },
                 {
                     "endTime": "18:00",
@@ -251,23 +202,23 @@
                     "stage": "1"
                 },
                 {
-                    "startTime": "16:30",
                     "name": "Burden to Atlas",
                     "stage": "2",
                     "day": "friday",
-                    "endTime": "17:10"
+                    "startTime": "17:00",
+                    "endTime": "17:40"
                 },
                 {
-                    "endTime": "13:55",
-                    "day": "saturday",
-                    "stage": "2",
-                    "name": "TBA101",
-                    "startTime": "13:20"
-                },
-                {
-                    "endTime": "19:00",
+                    "startTime": "19:05",
                     "name": "NECROTTED",
-                    "startTime": "18:15",
+                    "endTime": "19:50",
+                    "stage": "2",
+                    "day": "saturday"
+                },
+                {
+                    "startTime": "19:55",
+                    "name": "IHLO",
+                    "endTime": "20:55",
                     "stage": "1",
                     "day": "saturday"
                 }
