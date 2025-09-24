@@ -1,47 +1,54 @@
 {
     "Night Verses": {
         "nils": "\u2764\ufe0f",
-        "tom": "\ud83d\udc9c",
+        "tom": "\ud83d\udc4d",
         "bas": "\u2764\ufe0f",
-        "thomas": "\u2665\ufe0f"
+        "thomas": "\u2665\ufe0f",
+        "eric": "\ud83e\udd41"
     },
     "Tesseract": {
         "nils": "\u2764\ufe0f",
         "tom": "\ud83d\udc9c",
         "thomas": "\u2764\ufe0f",
-        "bas": "\ud83d\udc50"
+        "bas": "\ud83d\udc50",
+        "eric": "\ud83d\udc4f\ud83c\udffb"
     },
     "Abbie Falls": {
-        "eric": "",
+        "eric": "\ud83d\udc4a\ud83c\udffb",
         "thomas": "\u2764\ufe0f",
         "bas": "",
         "tom": "\ud83d\udc4d"
     },
     "Voyager": {
-        "eric": "",
+        "eric": "\ud83d\ude91",
         "nils": "\ud83c\udf08",
         "thomas": "\ud83d\ude42\u200d\u2194\ufe0f",
         "bas": "\ud83e\udd2e",
         "tom": "\ud83e\udd98"
     },
     "Burden to Atlas": {
-        "tom": "\ud83d\udeab"
+        "tom": "\ud83d\udeab",
+        "eric": "\ud83d\ude05"
     },
     "Walkways": {
         "tom": "\ud83c\uddee\ud83c\uddf1",
         "thomas": "\ud83d\udc4d",
-        "bas": "\ud83d\udca3"
+        "bas": "\ud83d\udca3",
+        "nils": "\ud83c\udf49",
+        "eric": "\ud83d\ude12"
     },
     "Ron Minis": {
         "tom": "\ud83d\udeab",
-        "nils": "\ud83d\udc4e",
-        "bas": "\ud83c\udfb9"
+        "nils": "\ud83c\udf55",
+        "bas": "\ud83c\udfb9",
+        "eric": "\ud83d\udfe6"
     },
     "No Oath": {
         "nils": "\u2764\ufe0f",
         "thomas": "\u2764\ufe0f",
         "bas": "\u2764\ufe0f",
-        "tom": "\ud83d\udc9c"
+        "tom": "\ud83d\udc9c",
+        "eric": "\ud83d\ude35\u200d\ud83d\udcab"
     },
     "Baikal": {
         "nils": "\u2764\ufe0f",
@@ -51,12 +58,15 @@
     "Dvne": {
         "thomas": "\ud83d\udc4d",
         "bas": "\u2764\ufe0f",
-        "tom": "\ud83d\udc9c"
+        "tom": "\ud83d\udc9c",
+        "eric": "\ud83d\udcaf"
     },
     "The Intersphere": {
         "thomas": "\u2665\ufe0f",
         "bas": "\u2764\ufe0f",
-        "tom": "\ud83d\udc9c"
+        "tom": "\ud83d\udc9c",
+        "laura": "",
+        "eric": "\ud83c\udf7a"
     },
     "OFFICIAL FESTIVAL WELCOME": {
         "bas": "\u26fd",
@@ -65,11 +75,13 @@
     "Intervals": {
         "bas": "\u2764\ufe0f",
         "tom": "\ud83d\udc4d",
-        "nils": "\ud83e\udd0d"
+        "nils": "\ud83e\udd0d",
+        "eric": "\ud83c\udfb8"
     },
     "Royal Sorrow": {
         "bas": "\ud83e\udd28",
-        "tom": "\ud83d\udeab"
+        "tom": "\ud83d\udeab",
+        "eric": "\ud83d\udc4d\ud83c\udffb"
     },
     "The Broken Horizon": {
         "bas": "\ud83e\udd50",
@@ -77,11 +89,13 @@
     },
     "vianova": {
         "bas": "\u2764\ufe0f",
-        "tom": "\ud83d\udc4d"
+        "tom": "\ud83d\udc9c",
+        "eric": "\ud83d\ude0e"
     },
     "NECROTTED": {
         "bas": "\ud83d\udc80",
-        "tom": "\u26b0\ufe0f"
+        "tom": "\u26b0\ufe0f",
+        "eric": "\ud83d\udc4c\ud83c\udffb"
     },
     "Haken": {
         "bas": "\ud83e\udeb3",
@@ -95,11 +109,13 @@
     },
     "Benthos": {
         "bas": "\u2764\ufe0f",
-        "tom": "\ud83d\udc4d"
+        "tom": "\ud83d\udc4d",
+        "eric": "\ud83e\udd78"
     },
     "Distant Dream": {
         "tom": "\ud83d\udeab",
-        "bas": ""
+        "bas": "",
+        "eric": "\ud83e\udde9"
     },
     "Sunborn": {
         "bas": "\ud83e\udd77",
@@ -108,11 +124,14 @@
     },
     "Isbj\u00f6rg": {
         "bas": "\ud83c\udfb9",
-        "tom": "\ud83d\udc4d"
+        "tom": "\ud83d\udc4d",
+        "laura": "",
+        "eric": "\ud83d\ude4c\ud83c\udffb"
     },
     "Dream State": {
         "bas": "\ud83d\ude46\u200d\u2640\ufe0f",
-        "tom": "\ud83d\ude46"
+        "tom": "\ud83d\ude46\ud83d\udc9c",
+        "eric": "\ud83e\udd72"
     },
     "The Dear Hunter": {
         "tom": "\ud83c\udff9",
@@ -123,7 +142,8 @@
         "tom": "\ud83c\udf05"
     },
     "Cevret": {
-        "tom": "\u2753\ud83c\udfa4"
+        "tom": "\u2753\ud83c\udfa4",
+        "eric": "\ud83e\udd78"
     },
     "FESTIVAL SHOUT OUTS": {
         "tom": "\u26fd"
@@ -145,9 +165,14 @@
     },
     "SENNA": {
         "nils": "\ud83c\udde7\ud83c\uddf7",
-        "tom": "\ud83d\udc4d"
+        "tom": "\ud83d\udc4d",
+        "eric": "\ud83d\udc4d\ud83c\udffb"
     },
     "Slope": {
-        "tom": "\ud83e\udd37"
+        "tom": "\ud83e\udd37",
+        "eric": "\ud83c\udfa4"
+    },
+    "IHLO": {
+        "eric": "\u2744\ufe0f"
     }
 }
