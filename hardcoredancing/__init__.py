@@ -232,7 +232,8 @@ def bingo(page=None):
     for name in valid_names:
         # generate a new bingo card
         if name not in bingo:
-            tiles = random.sample(bingo_bands, k=12) + ['yuroblast'] + random.sample(bingo_bands, k=12)
+            sample = random.sample(bingo_bands, k=24)
+            tiles = sample[:12] + ['yuroblast'] + sample[12:]
             bingo[name] = {
                 'bandname': tiles,
                 'state': [False] * 25,
