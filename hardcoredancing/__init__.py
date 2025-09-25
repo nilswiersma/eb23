@@ -50,12 +50,12 @@ def index(name=None):
 
     for band in schedule['props']['pageProps']['bands']:
         try:
-            band['rating'] = escape(''.join(ratings[band['name']].values()))
+            band['rating'] = ''.join(ratings[band['name']].values())
         except KeyError as e:
             pass
 
         try:
-            band['review'] = escape(reviews[band['name']])
+            band['review'] = reviews[band['name']]
         except KeyError as e:
             pass
 
