@@ -7,7 +7,7 @@ from markupsafe import escape
 app = Flask(__name__, subdomain_matching=True)
 app.config['SERVER_NAME'] = 'hardcoredancing.nl'
 
-valid_names = ['bas', 'eric', 'nils', 'thomas', 'tom', 'laura', 'rolf']
+valid_names = ['bas', 'eric', 'nils', 'thomas', 'tom', 'laura', 'rolf', 'rik', 'stephanie']
 with open('data/schedule.json', 'r') as f:
     schedule = json.load(f)
     valid_bands = list({x['name'] for x in schedule['props']['pageProps']['bands']})
