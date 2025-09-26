@@ -3,49 +3,55 @@
         "nils": "\u2764\ufe0f",
         "tom": "\ud83d\udc4d",
         "bas": "\u2764\ufe0f",
-        "thomas": "\u2665\ufe0f",
-        "eric": "\ud83e\udd41"
+        "thomas": "",
+        "eric": "\ud83e\udd41",
+        "rolf": "\u2764\ufe0f"
     },
     "Tesseract": {
         "nils": "\u2764\ufe0f",
         "tom": "\ud83d\udc9c",
-        "thomas": "\u2764\ufe0f",
+        "thomas": "",
         "bas": "\ud83d\udc50",
-        "eric": "\ud83d\udc4f\ud83c\udffb"
+        "eric": "\ud83d\udc4f\ud83c\udffb",
+        "rolf": "\u2764\ufe0f"
     },
     "Abbie Falls": {
         "eric": "\ud83d\udc4a\ud83c\udffb",
-        "thomas": "\u2764\ufe0f",
+        "thomas": "\u2665\ufe0f",
         "bas": "",
-        "tom": "\ud83d\udc4d"
+        "tom": "\ud83d\udc4d",
+        "nils": "\ud83d\udc4e"
     },
     "Voyager": {
         "eric": "\ud83d\ude91",
         "nils": "\ud83c\udf08",
-        "thomas": "\ud83d\ude42\u200d\u2194\ufe0f",
+        "thomas": "",
         "bas": "\ud83e\udd2e",
         "tom": "\ud83e\udd98"
     },
     "Burden to Atlas": {
         "tom": "\ud83d\udeab",
-        "eric": "\ud83d\ude05"
+        "eric": "\ud83d\ude05",
+        "thomas": ""
     },
     "Walkways": {
         "tom": "\ud83c\uddee\ud83c\uddf1",
-        "thomas": "\ud83d\udc4d",
+        "thomas": "",
         "bas": "\ud83d\udca3",
         "nils": "\ud83c\udf49",
-        "eric": "\ud83d\ude12"
+        "eric": "\ud83d\ude12",
+        "rolf": "\ud83d\udc4d"
     },
     "Ron Minis": {
         "tom": "\ud83d\udeab",
         "nils": "\ud83c\udf55",
         "bas": "\ud83c\udfb9",
-        "eric": "\ud83d\udfe6"
+        "eric": "\ud83d\udfe6",
+        "thomas": ""
     },
     "No Oath": {
         "nils": "\u2764\ufe0f",
-        "thomas": "\u2764\ufe0f",
+        "thomas": "\ud83d\udca4",
         "bas": "\u2764\ufe0f",
         "tom": "\ud83d\udc9c",
         "eric": "\ud83d\ude35\u200d\ud83d\udcab"
@@ -53,24 +59,30 @@
     "Baikal": {
         "nils": "\u2764\ufe0f",
         "bas": "\ud83c\udfda",
-        "tom": "\ud83c\udfd7\ufe0f"
+        "tom": "\ud83c\udfd7\ufe0f",
+        "thomas": ""
     },
     "Dvne": {
-        "thomas": "\ud83d\udc4d",
+        "thomas": "",
         "bas": "\u2764\ufe0f",
         "tom": "\ud83d\udc9c",
-        "eric": "\ud83d\udcaf"
+        "eric": "\ud83d\udcaf",
+        "rolf": "\ud83c\udd97\ufe0f",
+        "nils": "\ud83d\udc4d"
     },
     "The Intersphere": {
-        "thomas": "\u2665\ufe0f",
+        "thomas": "",
         "bas": "\u2764\ufe0f",
         "tom": "\ud83d\udc9c",
         "laura": "",
-        "eric": "\ud83c\udf7a"
+        "eric": "\ud83c\udf7a",
+        "rolf": "\ud83d\udc4d",
+        "nils": "\ud83d\udc95"
     },
     "OFFICIAL FESTIVAL WELCOME": {
         "bas": "\u26fd",
-        "tom": "\u26fd"
+        "tom": "\u26fd",
+        "nils": "\u26fd"
     },
     "Intervals": {
         "bas": "\u2764\ufe0f",
@@ -91,12 +103,17 @@
         "bas": "\u2764\ufe0f",
         "tom": "\ud83d\udc9c",
         "eric": "\ud83d\ude0e",
-        "rolf": "<3"
+        "rolf": "\u2764\ufe0f\u200d\ud83d\udd25",
+        "nils": "\ud83d\udc95",
+        "thomas": "\ud83d\udc4d"
     },
     "NECROTTED": {
         "bas": "\ud83d\udc80",
         "tom": "\u26b0\ufe0f",
-        "eric": "\ud83d\udc4c\ud83c\udffb"
+        "eric": "\ud83d\udc4c\ud83c\udffb",
+        "rolf": "\ud83e\udd22",
+        "nils": "\ud83e\udddf\u200d\u2642\ufe0f",
+        "thomas": ""
     },
     "Haken": {
         "bas": "\ud83e\udeb3",
@@ -104,14 +121,16 @@
         "nils": "\ud83d\udc12"
     },
     "Esoterica": {
-        "thomas": "\ud83d\udca4",
+        "thomas": "",
         "tom": "\ud83d\udecf\ufe0f",
         "bas": "\ud83d\ude34"
     },
     "Benthos": {
         "bas": "\u2764\ufe0f",
         "tom": "\ud83d\udc4d",
-        "eric": "\ud83e\udd78"
+        "eric": "\ud83e\udd78",
+        "nils": "\ud83d\udc4d",
+        "thomas": ""
     },
     "Distant Dream": {
         "tom": "\ud83d\udeab",
@@ -121,18 +140,24 @@
     "Sunborn": {
         "bas": "\ud83e\udd77",
         "tom": "\ud83e\udea9",
-        "nils": "\ud83e\udd37"
+        "nils": "\ud83e\udd37",
+        "thomas": ""
     },
     "Isbj\u00f6rg": {
         "bas": "\ud83c\udfb9",
         "tom": "\ud83d\udc4d",
         "laura": "",
-        "eric": "\ud83d\ude4c\ud83c\udffb"
+        "eric": "\ud83d\ude4c\ud83c\udffb",
+        "rolf": "\u2764\ufe0f",
+        "nils": "\ud83d\udc4d",
+        "thomas": ""
     },
     "Dream State": {
         "bas": "\ud83d\ude46\u200d\u2640\ufe0f",
         "tom": "\ud83d\ude46\ud83d\udc9c",
-        "eric": "\ud83e\udd72"
+        "eric": "\ud83e\udd72",
+        "thomas": "\ud83e\udd37",
+        "nils": "\ud83e\udd37"
     },
     "The Dear Hunter": {
         "tom": "\ud83c\udff9",
@@ -140,14 +165,18 @@
     },
     "Second Horizon": {
         "bas": "2\ufe0f\u20e3",
-        "tom": "\ud83c\udf05"
+        "tom": "\ud83c\udf05",
+        "nils": "\ud83e\udd37",
+        "thomas": ""
     },
     "Cevret": {
         "tom": "\u2753\ud83c\udfa4",
-        "eric": "\ud83e\udd78"
+        "eric": "\ud83e\udd78",
+        "thomas": ""
     },
     "FESTIVAL SHOUT OUTS": {
-        "tom": "\u26fd"
+        "tom": "\u26fd",
+        "nils": "\u26fd"
     },
     "EUROBLAST FAMILY PHOTO": {
         "tom": "\ud83c\udf4b\ud83e\udd67"
@@ -167,14 +196,28 @@
     "SENNA": {
         "nils": "\ud83c\udde7\ud83c\uddf7",
         "tom": "\ud83d\udc4d",
-        "eric": "\ud83d\udc4d\ud83c\udffb"
+        "eric": "\ud83d\udc4d\ud83c\udffb",
+        "thomas": ""
     },
     "Slope": {
         "tom": "\ud83e\udd37",
-        "eric": "\ud83c\udfa4"
+        "eric": "\ud83c\udfa4",
+        "rolf": "\u2764\ufe0f",
+        "thomas": "",
+        "nils": "\ud83e\udd37"
     },
     "IHLO": {
         "eric": "\u2744\ufe0f",
-        "rolf": "SN"
+        "rolf": "\ud83d\ude1e",
+        "thomas": "\ud83e\udee4"
+    },
+    "Hardcore met Remi": {
+        "nils": "\ud83e\udea9"
+    },
+    "EUROBLAST FAMILY PHOTO + EUROBLAST 2026": {
+        "nils": "\u26fd"
+    },
+    "Monosphere": {
+        "thomas": ""
     }
 }
