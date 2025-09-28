@@ -17,11 +17,11 @@
         "stephanie": "\ud83d\udd25"
     },
     "Abbie Falls": {
-        "eric": "\ud83d\udc4a\ud83c\udffb",
+        "eric": "",
         "thomas": "\u2665\ufe0f",
         "bas": "",
         "tom": "\ud83d\udc4d",
-        "nils": "\ud83d\udc4e"
+        "nils": "\ud83d\udc95"
     },
     "Voyager": {
         "eric": "\ud83d\ude91",
@@ -55,10 +55,11 @@
     },
     "No Oath": {
         "nils": "\u2764\ufe0f",
-        "thomas": "\ud83d\udca4",
+        "thomas": "",
         "bas": "\u2764\ufe0f",
         "tom": "\ud83d\udc9c",
-        "eric": "\ud83d\ude35\u200d\ud83d\udcab"
+        "eric": "\ud83d\ude35\u200d\ud83d\udcab",
+        "rik": ""
     },
     "Baikal": {
         "nils": "\u2764\ufe0f",
@@ -131,7 +132,8 @@
     "Esoterica": {
         "thomas": "",
         "tom": "\ud83d\udecf\ufe0f",
-        "bas": "\ud83d\ude34"
+        "bas": "\ud83d\ude34",
+        "eric": ""
     },
     "Benthos": {
         "bas": "\u2764\ufe0f",
@@ -150,7 +152,9 @@
         "bas": "\ud83e\udd77",
         "tom": "\ud83e\udea9",
         "nils": "\ud83e\udd37",
-        "thomas": ""
+        "thomas": "",
+        "eric": "",
+        "laura": ""
     },
     "Isbj\u00f6rg": {
         "bas": "\ud83c\udfb9",
@@ -166,7 +170,8 @@
         "tom": "\ud83d\ude46\ud83d\udc9c",
         "eric": "\ud83e\udd72",
         "thomas": "",
-        "nils": "\ud83e\udd37"
+        "nils": "\ud83d\ude46",
+        "laura": ""
     },
     "The Dear Hunter": {
         "tom": "\ud83c\udff9",
@@ -181,7 +186,8 @@
     "Cevret": {
         "tom": "\u2753\ud83c\udfa4",
         "eric": "\ud83e\udd78",
-        "thomas": ""
+        "thomas": "",
+        "laura": ""
     },
     "FESTIVAL SHOUT OUTS": {
         "tom": "\u26fd",
@@ -206,20 +212,24 @@
         "nils": "\ud83c\udde7\ud83c\uddf7",
         "tom": "\ud83d\udc4d",
         "eric": "\ud83d\udc4d\ud83c\udffb",
-        "thomas": ""
+        "thomas": "",
+        "rik": ""
     },
     "Slope": {
         "tom": "\ud83e\udd37",
         "eric": "\ud83c\udfa4",
         "rolf": "\u2764\ufe0f",
         "thomas": "",
-        "nils": "\ud83e\udd37"
+        "nils": "\ud83e\udd37",
+        "laura": ""
     },
     "IHLO": {
-        "eric": "\u2744\ufe0f",
+        "eric": "",
         "rolf": "\ud83d\ude1e",
         "thomas": "\ud83e\udee4",
-        "stephanie": "\ud83d\ude45\u200d\u2640\ufe0f"
+        "stephanie": "\ud83d\ude45\u200d\u2640\ufe0f",
+        "nils": "\u26c4",
+        "bas": ""
     },
     "Hardcore met Remi": {
         "nils": "\ud83e\udea9"
@@ -228,6 +238,7 @@
         "nils": "\u26fd"
     },
     "Monosphere": {
-        "thomas": ""
+        "thomas": "",
+        "rik": ""
     }
 }
