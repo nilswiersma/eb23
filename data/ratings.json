@@ -138,7 +138,7 @@
     "Benthos": {
         "bas": "\u2764\ufe0f",
         "tom": "\ud83d\udc4d",
-        "eric": "\ud83e\udd78",
+        "eric": "",
         "nils": "\ud83d\udc4d",
         "thomas": ""
     },
@@ -181,7 +181,8 @@
         "bas": "2\ufe0f\u20e3",
         "tom": "\ud83c\udf05",
         "nils": "\ud83e\udd37",
-        "thomas": ""
+        "thomas": "",
+        "eric": ""
     },
     "Cevret": {
         "tom": "\u2753\ud83c\udfa4",
