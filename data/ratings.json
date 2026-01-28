@@ -48,8 +48,8 @@
     "Ron Minis": {
         "tom": "\ud83d\udeab",
         "nils": "\ud83e\uddd4\u200d\u2640\ufe0f",
-        "bas": "\ud83c\udfb9",
-        "eric": "\ud83d\udfe6",
+        "bas": "",
+        "eric": "",
         "thomas": "",
         "stephanie": "\ud83e\udee8"
     },
@@ -133,7 +133,8 @@
         "thomas": "",
         "tom": "\ud83d\udecf\ufe0f",
         "bas": "\ud83d\ude34",
-        "eric": ""
+        "eric": "",
+        "rolf": ""
     },
     "Benthos": {
         "bas": "\u2764\ufe0f",
@@ -154,7 +155,8 @@
         "nils": "\ud83e\udd37",
         "thomas": "",
         "eric": "",
-        "laura": ""
+        "laura": "",
+        "rolf": ""
     },
     "Isbj\u00f6rg": {
         "bas": "\ud83c\udfb9",
