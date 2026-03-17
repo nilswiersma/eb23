@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
 <head>
     <meta charSet="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -31,117 +32,116 @@
 
 <body>
 
-<div id="__next">
-<table style="border-collapse: collapse; margin-left: auto; margin-right: auto;">
-<tr style="border-bottom: 1pt solid white;">
-    <td></td>
-    <td style="border-left: 1pt solid white; width: 50px">Ba</td>
-    <td style="border-left: 1pt solid white; width: 50px">Er</td>
-    <td style="border-left: 1pt solid white; width: 50px">Th</td>
-    <td style="border-left: 1pt solid white; width: 50px">To</td>
-    <td style="border-left: 1pt solid white; width: 50px">Ni</td>
-    <td style="border-left: 1pt solid white; width: 50px">La</td>
-    <td style="border-left: 1pt solid white; width: 50px">Ro</td>
-<td style="border-left: 1pt solid white; width: 50px">St</td>
-<td style="border-left: 1pt solid white; width: 50px">Ri</td>
-</tr>
-{% for band in bands|sort %}
-<tr style="border-bottom: 1pt solid white;">
-    <td>
-        <div class="bandcell" bandname="{{ band }}" bandreview="{{ reviews[band] }}">
-            {{ band }}
-        </div>
-    </td>
-    {% if band in ratings %}
-        <td style="border-left: 1pt solid white">
-            {{ ratings[band]['bas'] }}
-        </td>
-        <td style="border-left: 1pt solid white;">
-            {{ ratings[band]['eric'] }}
-        </td>
-        <td style="border-left: 1pt solid white;">
-            {{ ratings[band]['thomas'] }}
-        </td>
-        <td style="border-left: 1pt solid white;">
-            {{ ratings[band]['tom'] }}
-        </td>
-        <td style="border-left: 1pt solid white;">
-            {{ ratings[band]['nils'] }}
-        </td>
-        <td style="border-left: 1pt solid white;">
-            {{ ratings[band]['laura'] }}
-        </td>
-        <td style="border-left: 1pt solid white;">
-            {{ ratings[band]['rolf'] }}
-        </td>
-<td style="border-left: 1pt solid white;">
-            {{ ratings[band]['stephanie'] }}
-        </td>
-<td style="border-left: 1pt solid white;">
-            {{ ratings[band]['rik'] }}
-        </td>
-    {% else %}
-        <td style="border-left: 1pt solid white;"></td>
-        <td style="border-left: 1pt solid white;"></td>
-        <td style="border-left: 1pt solid white;"></td>
-        <td style="border-left: 1pt solid white;"></td>
-        <td style="border-left: 1pt solid white;"></td>
-        <td style="border-left: 1pt solid white;"></td>
-        <td style="border-left: 1pt solid white;"></td>
-<td style="border-left: 1pt solid white;"></td>
-<td style="border-left: 1pt solid white;"></td> 
-    {% endif %}
-</tr>
-{% endfor %}
-</table>
-<br/>
-<div id="person" align="center"></div>
-</div>
+    <div id="__next">
+        <table style="border-collapse: collapse; margin-left: auto; margin-right: auto;">
+            <tr style="border-bottom: 1pt solid white;">
+                <td></td>
+                <td style="border-left: 1pt solid white; width: 50px">Ba</td>
+                <td style="border-left: 1pt solid white; width: 50px">Er</td>
+                <td style="border-left: 1pt solid white; width: 50px">Th</td>
+                <td style="border-left: 1pt solid white; width: 50px">To</td>
+                <td style="border-left: 1pt solid white; width: 50px">Ni</td>
+                <td style="border-left: 1pt solid white; width: 50px">La</td>
+                <td style="border-left: 1pt solid white; width: 50px">Ro</td>
+                <td style="border-left: 1pt solid white; width: 50px">Ma</td>
+            </tr>
+            {% for band in bands|sort %}
+            <tr style="border-bottom: 1pt solid white;">
+                <td>
+                    <div class="bandcell" bandname="{{ band }}" bandreview="{{ reviews[band] }}">
+                        {{ band }}
+                    </div>
+                </td>
+                {% if band in ratings %}
+                <td style="border-left: 1pt solid white">
+                    {{ ratings[band]['bas'] }}
+                </td>
+                <td style="border-left: 1pt solid white;">
+                    {{ ratings[band]['eric'] }}
+                </td>
+                <td style="border-left: 1pt solid white;">
+                    {{ ratings[band]['thomas'] }}
+                </td>
+                <td style="border-left: 1pt solid white;">
+                    {{ ratings[band]['tom'] }}
+                </td>
+                <td style="border-left: 1pt solid white;">
+                    {{ ratings[band]['nils'] }}
+                </td>
+                <td style="border-left: 1pt solid white;">
+                    {{ ratings[band]['laura'] }}
+                </td>
+                <td style="border-left: 1pt solid white;">
+                    {{ ratings[band]['rolf'] }}
+                </td>
+                <td style="border-left: 1pt solid white;">
+                    {{ ratings[band]['stephanie'] }}
+                </td>
+                <td style="border-left: 1pt solid white;">
+                    {{ ratings[band]['rik'] }}
+                </td>
+                {% else %}
+                <td style="border-left: 1pt solid white;"></td>
+                <td style="border-left: 1pt solid white;"></td>
+                <td style="border-left: 1pt solid white;"></td>
+                <td style="border-left: 1pt solid white;"></td>
+                <td style="border-left: 1pt solid white;"></td>
+                <td style="border-left: 1pt solid white;"></td>
+                <td style="border-left: 1pt solid white;"></td>
+                <td style="border-left: 1pt solid white;"></td>
+                <td style="border-left: 1pt solid white;"></td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+        </table>
+        <br />
+        <div id="person" align="center"></div>
+    </div>
 
-<script>
+    <script>
 
-async function post_rating(person, band, rating) {
-    console.log(person + " rates " + band + " with " + rating);
+        async function post_rating(person, band, rating) {
+            console.log(person + " rates " + band + " with " + rating);
 
-    await fetch("/rate", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-            "person": person,
-            "band": band,
-            "rating": rating,
-        })
-    }).then(resp => {
-        return resp.text();
-    }).then(resp => {
-        console.log(resp);
-        if (resp == 'ok') {
-            location.reload();
+            await fetch("/rate", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    "person": person,
+                    "band": band,
+                    "rating": rating,
+                })
+            }).then(resp => {
+                return resp.text();
+            }).then(resp => {
+                console.log(resp);
+                if (resp == 'ok') {
+                    location.reload();
+                }
+            });
         }
-    });
-}
 
-function rating_click_handler(element) {
-    let person = document.cookie.split('=')[1];
-    let bandName = element.target.attributes['bandname'].textContent;
-    let bandReview = element.target.attributes['bandreview'].textContent;
-    if (person) {
-        let rating = prompt(bandName + "\n------\n" + bandReview + "\n------\n" + "Rating:", "");
-        post_rating(person, bandName, rating);
-    } else {
-        alert(bandName + "\n------\n" + bandReview);
-    }
-};
+        function rating_click_handler(element) {
+            let person = document.cookie.split('=')[1];
+            let bandName = element.target.attributes['bandname'].textContent;
+            let bandReview = element.target.attributes['bandreview'].textContent;
+            if (person) {
+                let rating = prompt(bandName + "\n------\n" + bandReview + "\n------\n" + "Rating:", "");
+                post_rating(person, bandName, rating);
+            } else {
+                alert(bandName + "\n------\n" + bandReview);
+            }
+        };
 
-window.addEventListener('load', async () => {
-    let person = document.cookie.split('=')[1];
-    document.querySelector('#person').textContent = person;
-    document.querySelectorAll('.bandcell').forEach(element => {
-        element.onclick = rating_click_handler;
-    });
-});
-</script>
+        window.addEventListener('load', async () => {
+            let person = document.cookie.split('=')[1];
+            document.querySelector('#person').textContent = person;
+            document.querySelectorAll('.bandcell').forEach(element => {
+                element.onclick = rating_click_handler;
+            });
+        });
+    </script>
 
 </body>
