@@ -5,7 +5,7 @@ from flask import Flask, make_response, render_template, request, redirect, url_
 from markupsafe import escape
 
 app = Flask(__name__, subdomain_matching=True)
-app.config['SERVER_NAME'] = 'hardcoredancing.nl'
+# app.config['SERVER_NAME'] = 'hardcoredancing.nl'
 
 valid_names = ['bas', 'eric', 'nils', 'thomas', 'tom', 'laura', 'rolf', 'martje']
 with open('data/schedule.json', 'r') as f:
@@ -160,7 +160,7 @@ def ratings():
     except FileNotFoundError as e:
         app.logger.warning(e)
 
-    return render_template('./ratings.html', bands=valid_bands, ratings=ratings, reviews=reviews)
+    return render_template('./ratings.html', bands=valid_bands, ratings=ratings, reviews=reviews, reviewers=valid_names)
 
 @app.route('/playlist')
 def playlist():

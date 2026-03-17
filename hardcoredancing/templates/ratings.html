@@ -33,18 +33,18 @@
 <body>
 
     <div id="__next">
+
+
         <table style="border-collapse: collapse; margin-left: auto; margin-right: auto;">
             <tr style="border-bottom: 1pt solid white;">
                 <td></td>
-                <td style="border-left: 1pt solid white; width: 50px">Ba</td>
-                <td style="border-left: 1pt solid white; width: 50px">Er</td>
-                <td style="border-left: 1pt solid white; width: 50px">Th</td>
-                <td style="border-left: 1pt solid white; width: 50px">To</td>
-                <td style="border-left: 1pt solid white; width: 50px">Ni</td>
-                <td style="border-left: 1pt solid white; width: 50px">La</td>
-                <td style="border-left: 1pt solid white; width: 50px">Ro</td>
-                <td style="border-left: 1pt solid white; width: 50px">Ma</td>
+                {% for r in reviewers %}
+                <td style="border-left: 1pt solid white; width: 50px">
+                    {{ r[:2]|capitalize }}
+                </td>
+                {% endfor %}
             </tr>
+        
             {% for band in bands|sort %}
             <tr style="border-bottom: 1pt solid white;">
                 <td>
@@ -52,48 +52,16 @@
                         {{ band }}
                     </div>
                 </td>
-                {% if band in ratings %}
-                <td style="border-left: 1pt solid white">
-                    {{ ratings[band]['bas'] }}
-                </td>
+        
+                {% for r in reviewers %}
                 <td style="border-left: 1pt solid white;">
-                    {{ ratings[band]['eric'] }}
+                    {{ ratings[band][r] if band in ratings and r in ratings[band] else '' }}
                 </td>
-                <td style="border-left: 1pt solid white;">
-                    {{ ratings[band]['thomas'] }}
-                </td>
-                <td style="border-left: 1pt solid white;">
-                    {{ ratings[band]['tom'] }}
-                </td>
-                <td style="border-left: 1pt solid white;">
-                    {{ ratings[band]['nils'] }}
-                </td>
-                <td style="border-left: 1pt solid white;">
-                    {{ ratings[band]['laura'] }}
-                </td>
-                <td style="border-left: 1pt solid white;">
-                    {{ ratings[band]['rolf'] }}
-                </td>
-                <td style="border-left: 1pt solid white;">
-                    {{ ratings[band]['stephanie'] }}
-                </td>
-                <td style="border-left: 1pt solid white;">
-                    {{ ratings[band]['rik'] }}
-                </td>
-                {% else %}
-                <td style="border-left: 1pt solid white;"></td>
-                <td style="border-left: 1pt solid white;"></td>
-                <td style="border-left: 1pt solid white;"></td>
-                <td style="border-left: 1pt solid white;"></td>
-                <td style="border-left: 1pt solid white;"></td>
-                <td style="border-left: 1pt solid white;"></td>
-                <td style="border-left: 1pt solid white;"></td>
-                <td style="border-left: 1pt solid white;"></td>
-                <td style="border-left: 1pt solid white;"></td>
-                {% endif %}
+                {% endfor %}
             </tr>
             {% endfor %}
         </table>
+        
         <br />
         <div id="person" align="center"></div>
     </div>
