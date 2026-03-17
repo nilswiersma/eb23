@@ -1,0 +1,229 @@
+[
+    {
+        "day": "friday",
+        "endTime": "01:30",
+        "name": "Metal Afterparty with Tim",
+        "stage": "2",
+        "startTime": "00:00"
+    },
+    {
+        "day": "friday",
+        "endTime": "16:55",
+        "name": "The Intersphere",
+        "stage": "1",
+        "startTime": "16:10"
+    },
+    {
+        "day": "friday",
+        "endTime": "17:40",
+        "name": "Burden to Atlas",
+        "stage": "2",
+        "startTime": "17:00"
+    },
+    {
+        "day": "friday",
+        "endTime": "18:45",
+        "name": "Dvne",
+        "stage": "1",
+        "startTime": "17:45"
+    },
+    {
+        "day": "friday",
+        "endTime": "19:30",
+        "name": "Royal Sorrow",
+        "stage": "2",
+        "startTime": "18:50"
+    },
+    {
+        "day": "friday",
+        "endTime": "20:45",
+        "name": "Intervals",
+        "stage": "1",
+        "startTime": "19:35"
+    },
+    {
+        "day": "friday",
+        "endTime": "21:35",
+        "name": "Distant Dream",
+        "stage": "2",
+        "startTime": "20:50"
+    },
+    {
+        "announcement": true,
+        "day": "friday",
+        "endTime": "21:44",
+        "name": "OFFICIAL FESTIVAL WELCOME",
+        "stage": "1",
+        "startTime": "21:20"
+    },
+    {
+        "day": "friday",
+        "endTime": "23:05",
+        "name": "Night Verses",
+        "stage": "1",
+        "startTime": "21:45"
+    },
+    {
+        "day": "friday",
+        "endTime": "23:55",
+        "name": "vianova",
+        "stage": "2",
+        "startTime": "23:10"
+    },
+    {
+        "day": "saturday",
+        "endTime": "15:00",
+        "name": "Cevret",
+        "stage": "2",
+        "startTime": "14:20"
+    },
+    {
+        "day": "saturday",
+        "endTime": "15:50",
+        "name": "Walkways",
+        "stage": "1",
+        "startTime": "15:05"
+    },
+    {
+        "day": "saturday",
+        "endTime": "16:35",
+        "name": "Monosphere",
+        "stage": "2",
+        "startTime": "15:55"
+    },
+    {
+        "day": "saturday",
+        "endTime": "17:25",
+        "name": "No Oath",
+        "stage": "1",
+        "startTime": "16:40"
+    },
+    {
+        "day": "saturday",
+        "endTime": "18:10",
+        "name": "SENNA",
+        "stage": "2",
+        "startTime": "17:30"
+    },
+    {
+        "day": "saturday",
+        "endTime": "19:00",
+        "name": "Dream State",
+        "stage": "1",
+        "startTime": "18:15"
+    },
+    {
+        "day": "saturday",
+        "endTime": "19:50",
+        "name": "NECROTTED",
+        "stage": "2",
+        "startTime": "19:05"
+    },
+    {
+        "day": "saturday",
+        "endTime": "20:55",
+        "name": "IHLO",
+        "stage": "1",
+        "startTime": "19:55"
+    },
+    {
+        "day": "saturday",
+        "endTime": "21:45",
+        "name": "Abbie Falls",
+        "stage": "2",
+        "startTime": "21:00"
+    },
+    {
+        "announcement": true,
+        "day": "saturday",
+        "endTime": "21:54",
+        "name": "FESTIVAL SHOUT OUTS",
+        "stage": "1",
+        "startTime": "21:40"
+    },
+    {
+        "day": "saturday",
+        "endTime": "23:40",
+        "name": "Voyager",
+        "stage": "1",
+        "startTime": "21:55"
+    },
+    {
+        "day": "sunday",
+        "endTime": "15:00",
+        "name": "Benthos",
+        "stage": "1",
+        "startTime": "14:20"
+    },
+    {
+        "day": "sunday",
+        "endTime": "15:40",
+        "name": "Second Horizon",
+        "stage": "2",
+        "startTime": "15:05"
+    },
+    {
+        "day": "sunday",
+        "endTime": "16:25",
+        "name": "Ron Minis",
+        "stage": "1",
+        "startTime": "15:45"
+    },
+    {
+        "day": "sunday",
+        "endTime": "17:10",
+        "name": "Sunborn",
+        "stage": "2",
+        "startTime": "16:30"
+    },
+    {
+        "day": "sunday",
+        "endTime": "18:00",
+        "name": "Esoterica",
+        "stage": "1",
+        "startTime": "17:15"
+    },
+    {
+        "day": "sunday",
+        "endTime": "18:55",
+        "name": "Isbj\u00f6rg",
+        "stage": "2",
+        "startTime": "18:15"
+    },
+    {
+        "day": "sunday",
+        "endTime": "19:55",
+        "name": "Slope",
+        "stage": "1",
+        "startTime": "19:00"
+    },
+    {
+        "announcement": "true",
+        "day": "sunday",
+        "endTime": "20:35",
+        "name": "EUROBLAST FAMILY PHOTO + EUROBLAST 2026",
+        "stage": "1",
+        "startTime": "19:56"
+    },
+    {
+        "day": "sunday",
+        "endTime": "20:55",
+        "name": "Baikal",
+        "stage": "2",
+        "startTime": "20:10"
+    },
+    {
+        "day": "sunday",
+        "endTime": "22:30",
+        "name": "Tesseract",
+        "stage": "1",
+        "startTime": "21:00"
+    },
+    {
+        "day": "sunday",
+        "endTime": "End of Times",
+        "name": "Hardcore met Remi",
+        "stage": "2",
+        "startTime": "23:00"
+    }
+]
