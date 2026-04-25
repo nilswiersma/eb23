@@ -121,6 +121,23 @@ h2 {
 .past-event {
     display: none;
 }
+
+.event-link {
+    font-size: 0.85em;
+    color: #007AFF;
+    text-decoration: none;
+    margin-left: 4px;
+}
+
+.event-link:hover {
+    text-decoration: underline;
+}
+
+@media (prefers-color-scheme: dark) {
+    .event-link {
+        color: #62a0ff;
+    }
+}
     </style>
 </head>
 <body>
@@ -248,7 +265,15 @@ h2 {
                 groupedEvents[date].forEach(event => {
                     let eventItem = document.createElement("div");
                     eventItem.className = "event title";
-                    eventItem.textContent = event.title;
+                    eventItem.textContent = event.title + " ";
+                    // !ducky is DuckDuckGo's "I'm feeling lucky" bang — redirects to the first result.
+                    const link = document.createElement("a");
+                    link.href = `https://duckduckgo.com/?q=${encodeURIComponent('!ducky ' + event.title)}`;
+                    link.target = "_blank";
+                    link.rel = "noopener noreferrer";
+                    link.className = "event-link";
+                    link.textContent = "[event link]";
+                    eventItem.appendChild(link);
                     group.appendChild(eventItem);
                 });
 
