@@ -266,15 +266,30 @@ h2 {
                     let eventItem = document.createElement("div");
                     eventItem.className = "event title";
                     eventItem.textContent = event.title + " ";
-                    // !ducky is DuckDuckGo's "I'm feeling lucky" bang — redirects to the first result.
+                    const year = event.start.full.getFullYear();
+                    const query = event.title + " " + year;
                     const link = document.createElement("a");
-                    link.href = `https://duckduckgo.com/?q=${encodeURIComponent('!ducky ' + event.title)}`;
+                    // Initial fallback href: !ducky takes the user to the first DDG result if our async lookup hasn't returned yet.
+                    link.href = `https://duckduckgo.com/?q=${encodeURIComponent('!ducky ' + query)}`;
                     link.target = "_blank";
                     link.rel = "noopener noreferrer";
                     link.className = "event-link";
-                    link.textContent = "[event link]";
+                    link.textContent = "[…]";
                     eventItem.appendChild(link);
                     group.appendChild(eventItem);
+
+                    // Resolve the actual first-result page title server-side.
+                    fetch(`/event-link?q=${encodeURIComponent(query)}`)
+                        .then(r => r.json())
+                        .then(data => {
+                            if (data && data.title) {
+                                link.textContent = "[" + data.title + "]";
+                                if (data.url) link.href = data.url;
+                            } else {
+                                link.textContent = "[event link]";
+                            }
+                        })
+                        .catch(() => { link.textContent = "[event link]"; });
                 });
 
                 eventList.appendChild(group);

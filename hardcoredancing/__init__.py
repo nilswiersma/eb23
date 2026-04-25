@@ -187,6 +187,46 @@ def agenda_ics():
     resp.headers['Cache-Control'] = 'public, max-age=60'
     return resp
 
+# Process-lifetime cache so repeat lookups don't hammer DDG. Restarts naturally on deploy.
+_event_link_cache = {}
+
+def _ddg_first_result(query):
+    if query in _event_link_cache:
+        return _event_link_cache[query]
+    import urllib.request, urllib.parse, re, html as html_mod
+    url = 'https://html.duckduckgo.com/html/?q=' + urllib.parse.quote_plus(query)
+    req = urllib.request.Request(url, headers={
+        'User-Agent': 'Mozilla/5.0 (compatible; hardcoredancing-agenda/1.0)',
+    })
+    with urllib.request.urlopen(req, timeout=10) as r:
+        body = r.read().decode('utf-8', errors='replace')
+    m = re.search(r'<a[^>]*class="result__a"[^>]*href="([^"]*)"[^>]*>(.*?)</a>', body, re.DOTALL)
+    if not m:
+        result = {'title': None, 'url': None}
+    else:
+        href = m.group(1)
+        title = html_mod.unescape(re.sub(r'<[^>]+>', '', m.group(2))).strip()
+        # DDG wraps result URLs as //duckduckgo.com/l/?uddg=<url-encoded-target>&...
+        mm = re.search(r'uddg=([^&]+)', href)
+        if mm:
+            href = urllib.parse.unquote(mm.group(1))
+        if href.startswith('//'):
+            href = 'https:' + href
+        result = {'title': title, 'url': href}
+    _event_link_cache[query] = result
+    return result
+
+@app.route('/event-link', subdomain='agenda')
+def event_link():
+    q = request.args.get('q', '').strip()
+    if not q:
+        return jsonify({'error': 'missing q'}), 400
+    try:
+        return jsonify(_ddg_first_result(q))
+    except Exception as e:
+        app.logger.warning(f'event-link lookup failed for {q!r}: {e}')
+        return jsonify({'title': None, 'url': None}), 502
+
 @app.route('/stamp', methods=["POST"])
 def stamp():
     stamp = request.get_json()
