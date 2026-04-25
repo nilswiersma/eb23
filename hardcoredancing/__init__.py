@@ -190,17 +190,43 @@ def agenda_ics():
 # Process-lifetime cache so repeat lookups don't hammer DDG. Restarts naturally on deploy.
 _event_link_cache = {}
 
+_DDG_HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Accept-Language': 'en-US,en;q=0.5',
+    'Accept-Encoding': 'identity',
+    'Referer': 'https://duckduckgo.com/',
+    'Origin': 'https://duckduckgo.com',
+    'Content-Type': 'application/x-www-form-urlencoded',
+}
+
+def _ddg_fetch(query):
+    """Fetch DDG's HTML SERP. Tries the html-form POST first, falls back to lite GET."""
+    import urllib.request, urllib.parse
+    # 1. Mimic the html.duckduckgo.com POST that the real search form makes.
+    data = urllib.parse.urlencode({'q': query, 'b': '', 'kl': 'us-en'}).encode()
+    req = urllib.request.Request('https://html.duckduckgo.com/html/', data=data, headers=_DDG_HEADERS)
+    try:
+        with urllib.request.urlopen(req, timeout=10) as r:
+            return r.read().decode('utf-8', errors='replace')
+    except urllib.error.HTTPError as e:
+        if e.code != 403:
+            raise
+    # 2. Fallback: lite endpoint, GET. Different markup but parseable by the same regex below.
+    url = 'https://lite.duckduckgo.com/lite/?q=' + urllib.parse.quote_plus(query)
+    req = urllib.request.Request(url, headers=_DDG_HEADERS)
+    with urllib.request.urlopen(req, timeout=10) as r:
+        return r.read().decode('utf-8', errors='replace')
+
 def _ddg_first_result(query):
     if query in _event_link_cache:
         return _event_link_cache[query]
-    import urllib.request, urllib.parse, re, html as html_mod
-    url = 'https://html.duckduckgo.com/html/?q=' + urllib.parse.quote_plus(query)
-    req = urllib.request.Request(url, headers={
-        'User-Agent': 'Mozilla/5.0 (compatible; hardcoredancing-agenda/1.0)',
-    })
-    with urllib.request.urlopen(req, timeout=10) as r:
-        body = r.read().decode('utf-8', errors='replace')
+    import urllib.parse, re, html as html_mod
+    body = _ddg_fetch(query)
+    # html.duckduckgo.com uses class="result__a"; lite uses rel="nofollow" without that class.
     m = re.search(r'<a[^>]*class="result__a"[^>]*href="([^"]*)"[^>]*>(.*?)</a>', body, re.DOTALL)
+    if not m:
+        m = re.search(r'<a\s+rel="nofollow"\s+href="([^"]+)"[^>]*>(.*?)</a>', body, re.DOTALL)
     if not m:
         result = {'title': None, 'url': None}
     else:
