@@ -11,7 +11,7 @@ app.config['PREFERRED_URL_SCHEME'] = 'https'
 # nginx terminates TLS and forwards X-Forwarded-{Proto,Host,For}; trust 1 hop.
 app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1)
 
-valid_names = ['bas', 'eric', 'nils', 'thomas', 'tom', 'laura', 'rolf']
+valid_names = ['bas', 'eric', 'nils', 'thomas', 'tom', 'laura', 'rolf', 'martje']
 with open('data/schedule.json', 'r') as f:
     schedule = json.load(f)
     valid_bands = list({x['name'] for x in schedule['props']['pageProps']['bands']})
@@ -164,7 +164,7 @@ def ratings():
     except FileNotFoundError as e:
         app.logger.warning(e)
 
-    return render_template('./ratings.html', bands=valid_bands, ratings=ratings, reviews=reviews)
+    return render_template('./ratings.html', bands=valid_bands, ratings=ratings, reviews=reviews, reviewers=valid_names)
 
 @app.route('/playlist')
 def playlist():
