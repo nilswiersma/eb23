@@ -175,6 +175,18 @@ def agenda(page=None):
     # app.logger.warning('agenda handler')
     return render_template('./agenda.html')
 
+ICAL_URL = 'https://calendar.google.com/calendar/ical/tq51pmqj7phn17n8tnfgbhcgl8%40group.calendar.google.com/private-8ab772bb2048694003989d2279c9ff9f/basic.ics'
+
+@app.route('/agenda.ics', subdomain='agenda')
+def agenda_ics():
+    import urllib.request
+    with urllib.request.urlopen(ICAL_URL, timeout=10) as r:
+        body = r.read()
+    resp = make_response(body)
+    resp.headers['Content-Type'] = 'text/calendar; charset=utf-8'
+    resp.headers['Cache-Control'] = 'public, max-age=60'
+    return resp
+
 @app.route('/stamp', methods=["POST"])
 def stamp():
     stamp = request.get_json()

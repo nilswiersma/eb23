@@ -130,7 +130,7 @@ h2 {
     <ul class="event-list" id="event-list"></ul>
 
     <script>
-        const icalUrl = "https://corsproxy.io/?url=https://calendar.google.com/calendar/ical/tq51pmqj7phn17n8tnfgbhcgl8%40group.calendar.google.com/private-8ab772bb2048694003989d2279c9ff9f/basic.ics";  // Replace this with your secret iCal URL
+        const icalUrl = "/agenda.ics";  // served same-origin by the Flask backend; the secret Google URL stays server-side
 
 
         async function fetchCalendar() {
