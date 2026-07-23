@@ -1,15 +1,19 @@
 {
     "Agent Fresco": {
-        "nils": "\ud83e\udd0e"
+        "nils": "\ud83e\udd0e",
+        "tom": "\ud83d\udc9c"
     },
     "Vildhjarta": {
-        "nils": "\ud83e\udd0e"
+        "nils": "\ud83e\udd0e",
+        "tom": "\ud83d\udc9c"
     },
     "The Dali Thundering Concept": {
-        "nils": "\ud83e\udd0e"
+        "nils": "\ud83e\udd0e",
+        "tom": "\ud83d\udc9c"
     },
     "Karmanjakah": {
-        "nils": "\ud83e\udd0e"
+        "nils": "\ud83e\udd0e",
+        "tom": "\ud83d\udc9c"
     },
     "Humanity's Last Breath": {
         "nils": "\ud83e\udd0e"
@@ -19,5 +23,8 @@
     },
     "The Dear Hunter": {
         "nils": "\ud83e\udd0e"
+    },
+    "Fractal Sun": {
+        "tom": "\ud83c\udf44\ud83d\udc83 "
     }
 }
