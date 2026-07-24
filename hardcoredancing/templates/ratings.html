@@ -9,9 +9,9 @@
     <link rel="manifest" href="manifest.json" />
     <meta name="theme-color" content="#000d1e" />
     <meta name="next-head-count" content="5" />
-    <!-- <script src="{{ url_for('static', filename='emojibuttonlistjs.js') }}" defer=""></script> -->
-    <!-- <link rel="preload" href="static/css/emojibuttonlistjs.css" as="style" /> -->
-    <!-- <link rel="stylesheet" href="static/css/emojibuttonlistjs.css" data-n-g="" /> -->
+    <script src="{{ url_for('static', filename='emojibuttonlistjs.js') }}" defer=""></script>
+    <link rel="preload" href="static/css/emojibuttonlistjs.css" as="style" />
+    <link rel="stylesheet" href="static/css/emojibuttonlistjs.css" data-n-g="" />
     <link rel="preload" href="static/css/51f481c946f5cddc.css" as="style" />
     <link rel="stylesheet" href="static/css/51f481c946f5cddc.css" data-n-g="" />
     <link rel="preload" href="static/css/d5e43d44d6da1600.css" as="style" />
@@ -96,8 +96,7 @@
             let bandName = element.target.attributes['bandname'].textContent;
             let bandReview = element.target.attributes['bandreview'].textContent;
             if (person) {
-                let rating = prompt(bandName + "\n------\n" + bandReview + "\n------\n" + "Rating:", "");
-                post_rating(person, bandName, rating);
+                window.showEmojiPicker(bandName, bandReview, function(rating) { post_rating(person, bandName, rating); });
             } else {
                 alert(bandName + "\n------\n" + bandReview);
             }

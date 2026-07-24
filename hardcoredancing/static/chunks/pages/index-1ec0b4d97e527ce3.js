@@ -105,8 +105,7 @@ async function post_rating(person, band, rating) {
                     var rating_click_handler = function(e) {
                         let person = document.cookie.split('=')[1];
                         if (person) {
-                            let rating = prompt(a.band.name + "\n------\n" + a.band.review + "\n------\n" + "Rating:", "");
-                            post_rating(person, a.band.name, rating);
+                            window.showEmojiPicker(a.band.name, a.band.review, function(rating) { post_rating(person, a.band.name, rating); }); return;
                         } else {
                             alert(a.band.name + "\n------\n" + a.band.review);
                         }

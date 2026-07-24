@@ -6,8 +6,8 @@ from markupsafe import escape
 from werkzeug.middleware.proxy_fix import ProxyFix
 
 app = Flask(__name__, subdomain_matching=True)
-app.config['SERVER_NAME'] = 'hardcoredancing.nl'
-app.config['PREFERRED_URL_SCHEME'] = 'https'
+# app.config['SERVER_NAME'] = 'hardcoredancing.nl'
+# app.config['PREFERRED_URL_SCHEME'] = 'https'
 # nginx terminates TLS and forwards X-Forwarded-{Proto,Host,For}; trust 1 hop.
 app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1)
 
@@ -220,6 +220,43 @@ def stamp():
     
     return 'ok'
 
+
+_emoji_cache = None
+
+def _parse_emoji_test(text):
+    categories = []
+    current = None
+    for line in text.splitlines():
+        line = line.strip()
+        if line.startswith('# group:'):
+            name = line[len('# group:'):].strip()
+            if name == 'Component':
+                current = None
+                continue
+            current = {'name': name, 'emojis': []}
+            categories.append(current)
+        elif current is not None and '; fully-qualified' in line and not line.startswith('#'):
+            comment = line.split('#', 1)[1].strip()
+            emoji = comment.split()[0]
+            current['emojis'].append(emoji)
+    return categories
+
+@app.route('/emojis')
+def emojis():
+    global _emoji_cache
+    if _emoji_cache is None:
+        try:
+            with open('data/emojis.json', 'r') as f:
+                _emoji_cache = json.load(f)
+        except (FileNotFoundError, json.JSONDecodeError):
+            import urllib.request
+            url = 'https://unicode.org/Public/emoji/latest/emoji-test.txt'
+            with urllib.request.urlopen(url, timeout=15) as r:
+                text = r.read().decode('utf-8')
+            _emoji_cache = _parse_emoji_test(text)
+            with open('data/emojis.json', 'w') as f:
+                json.dump(_emoji_cache, f, ensure_ascii=False)
+    return jsonify(_emoji_cache)
 
 @app.route('/bingo')
 # @app.route('/', subdomain='bingo')

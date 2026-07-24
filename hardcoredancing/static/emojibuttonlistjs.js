@@ -204,3 +204,97 @@ function emojiButtonList(attachTo, options) {
     }
     )(document, window);
 }
+
+window.showEmojiPicker = function(bandName, review, callback) {
+    var TAB_ICONS = {
+        'Smileys & Emotion': '😀',
+        'People & Body': '🤚',
+        'Animals & Nature': '🐶',
+        'Food & Drink': '🍔',
+        'Travel & Places': '🗺️',
+        'Activities': '⚽',
+        'Objects': '💡',
+        'Symbols': '🔣',
+        'Flags': '🏁',
+    };
+
+    var backdrop = document.createElement('div');
+    backdrop.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:1000;display:flex;align-items:center;justify-content:center;';
+
+    var picker = document.createElement('div');
+    picker.className = 'emoji-drop-down custom-scroll-bars';
+    picker.style.cssText = 'display:flex;flex-direction:column;position:relative;width:90vw;max-width:90vw;height:70vh;overflow:hidden;';
+
+    var header = document.createElement('div');
+    header.style.cssText = 'font-weight:bold;font-size:14pt;border-bottom:1px solid #282828;padding-bottom:4px;margin-bottom:4px;flex-shrink:0;';
+    header.textContent = bandName;
+    picker.appendChild(header);
+
+    if (review) {
+        var rev = document.createElement('div');
+        rev.style.cssText = 'font-size:10pt;font-style:italic;margin-bottom:4px;flex-shrink:0;';
+        rev.textContent = review;
+        picker.appendChild(rev);
+    }
+
+    var tabBar = document.createElement('div');
+    tabBar.style.cssText = 'display:flex;flex-wrap:wrap;border-bottom:1px solid #ccc;margin-bottom:4px;flex-shrink:0;';
+    picker.appendChild(tabBar);
+
+    var grid = document.createElement('div');
+    grid.style.cssText = 'flex:1;overflow-y:auto;text-align:center;white-space:normal;';
+    grid.textContent = '⏳';
+    picker.appendChild(grid);
+
+    function renderCat(cat, activeTab) {
+        grid.innerHTML = '';
+        grid.scrollTop = 0;
+        tabBar.querySelectorAll('span').forEach(function(t) {
+            t.style.borderBottom = '2px solid transparent';
+            t.style.opacity = '0.5';
+        });
+        activeTab.style.borderBottom = '2px solid #282828';
+        activeTab.style.opacity = '1';
+        cat.emojis.forEach(function(emoji) {
+            var btn = document.createElement('div');
+            btn.className = 'emoji';
+            btn.textContent = emoji;
+            btn.onclick = function(e) {
+                e.stopPropagation();
+                document.body.removeChild(backdrop);
+                callback(emoji);
+            };
+            grid.appendChild(btn);
+        });
+    }
+
+    function buildTabs(categories) {
+        var firstTab = null;
+        categories.forEach(function(cat, i) {
+            var tab = document.createElement('span');
+            tab.textContent = TAB_ICONS[cat.name] || cat.emojis[0] || '?';
+            tab.title = cat.name;
+            tab.style.cssText = 'flex:1;text-align:center;padding:4px 2px;cursor:pointer;font-size:16pt;border-bottom:2px solid transparent;opacity:0.5;';
+            tab.onclick = function(e) { e.stopPropagation(); renderCat(cat, tab); };
+            tabBar.appendChild(tab);
+            if (i === 0) firstTab = tab;
+        });
+        if (firstTab) renderCat(categories[0], firstTab);
+    }
+
+    picker.onclick = function(e) { e.stopPropagation(); };
+    backdrop.onclick = function() { document.body.removeChild(backdrop); };
+    backdrop.appendChild(picker);
+    document.body.appendChild(backdrop);
+
+    if (window._emojiData) {
+        buildTabs(window._emojiData);
+    } else {
+        fetch('/emojis')
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                window._emojiData = data;
+                buildTabs(data);
+            });
+    }
+};
