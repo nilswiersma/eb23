@@ -1,5 +1,6 @@
 import json
 import logging
+from pathlib import Path
 import random
 from flask import Flask, make_response, render_template, request, redirect, url_for, jsonify
 from markupsafe import escape
@@ -237,8 +238,8 @@ def _parse_emoji_test(text):
             categories.append(current)
         elif current is not None and '; fully-qualified' in line and not line.startswith('#'):
             comment = line.split('#', 1)[1].strip()
-            emoji = comment.split()[0]
-            current['emojis'].append(emoji)
+            parts = comment.split()
+            current['emojis'].append({'char': parts[0], 'name': ' '.join(parts[2:])})
     return categories
 
 @app.route('/emojis')
@@ -249,6 +250,9 @@ def emojis():
             with open('data/emojis.json', 'r') as f:
                 _emoji_cache = json.load(f)
         except (FileNotFoundError, json.JSONDecodeError):
+            pass
+    if _emoji_cache is None:
+        try:
             import urllib.request
             url = 'https://unicode.org/Public/emoji/latest/emoji-test.txt'
             with urllib.request.urlopen(url, timeout=15) as r:
@@ -256,6 +260,9 @@ def emojis():
             _emoji_cache = _parse_emoji_test(text)
             with open('data/emojis.json', 'w') as f:
                 json.dump(_emoji_cache, f, ensure_ascii=False)
+        except Exception as e:
+            app.logger.error(f'Failed to fetch emoji-test.txt: {e}')
+            return jsonify({'error': str(e)}), 500
     return jsonify(_emoji_cache)
 
 @app.route('/bingo')

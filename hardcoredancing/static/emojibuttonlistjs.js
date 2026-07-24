@@ -246,33 +246,63 @@ window.showEmojiPicker = function(bandName, review, callback) {
     grid.textContent = '⏳';
     picker.appendChild(grid);
 
+    var search = document.createElement('input');
+    search.type = 'text';
+    search.placeholder = 'search…';
+    search.style.cssText = 'width:100%;box-sizing:border-box;padding:4px 6px;margin-bottom:4px;font-size:12pt;border:1px solid #ccc;border-radius:4px;flex-shrink:0;background:#f5f5f5;color:#282828;outline:none;';
+    picker.appendChild(search);
+
+    function makeEmojiBtn(item) {
+        var btn = document.createElement('div');
+        btn.className = 'emoji';
+        btn.textContent = item.char;
+        btn.title = item.name;
+        btn.onclick = function(e) {
+            e.stopPropagation();
+            document.body.removeChild(backdrop);
+            callback(item.char);
+        };
+        return btn;
+    }
+
     function renderCat(cat, activeTab) {
+        search.value = '';
         grid.innerHTML = '';
         grid.scrollTop = 0;
         tabBar.querySelectorAll('span').forEach(function(t) {
             t.style.borderBottom = '2px solid transparent';
             t.style.opacity = '0.5';
+            delete t.dataset.active;
         });
         activeTab.style.borderBottom = '2px solid #282828';
         activeTab.style.opacity = '1';
-        cat.emojis.forEach(function(emoji) {
-            var btn = document.createElement('div');
-            btn.className = 'emoji';
-            btn.textContent = emoji;
-            btn.onclick = function(e) {
-                e.stopPropagation();
-                document.body.removeChild(backdrop);
-                callback(emoji);
-            };
-            grid.appendChild(btn);
-        });
+        activeTab.dataset.active = '1';
+        cat.emojis.forEach(function(item) { grid.appendChild(makeEmojiBtn(item)); });
     }
+
+    search.oninput = function(e) {
+        e.stopPropagation();
+        var term = search.value.trim().toLowerCase();
+        grid.innerHTML = '';
+        grid.scrollTop = 0;
+        if (!term) {
+            var activeTab = tabBar.querySelector('[data-active]');
+            if (activeTab) activeTab.click();
+            return;
+        }
+        window._emojiData.forEach(function(cat) {
+            cat.emojis.forEach(function(item) {
+                if (item.name.indexOf(term) !== -1) grid.appendChild(makeEmojiBtn(item));
+            });
+        });
+    };
+    search.onclick = function(e) { e.stopPropagation(); };
 
     function buildTabs(categories) {
         var firstTab = null;
         categories.forEach(function(cat, i) {
             var tab = document.createElement('span');
-            tab.textContent = TAB_ICONS[cat.name] || cat.emojis[0] || '?';
+            tab.textContent = TAB_ICONS[cat.name] || cat.emojis[0].char || '?';
             tab.title = cat.name;
             tab.style.cssText = 'flex:1;text-align:center;padding:4px 2px;cursor:pointer;font-size:16pt;border-bottom:2px solid transparent;opacity:0.5;';
             tab.onclick = function(e) { e.stopPropagation(); renderCat(cat, tab); };
@@ -291,10 +321,17 @@ window.showEmojiPicker = function(bandName, review, callback) {
         buildTabs(window._emojiData);
     } else {
         fetch('/emojis')
-            .then(function(r) { return r.json(); })
+            .then(function(r) {
+                if (!r.ok) throw new Error('HTTP ' + r.status);
+                return r.json();
+            })
             .then(function(data) {
+                if (!Array.isArray(data)) throw new Error('unexpected response');
                 window._emojiData = data;
                 buildTabs(data);
+            })
+            .catch(function(err) {
+                grid.textContent = '❌ ' + err.message;
             });
     }
 };
