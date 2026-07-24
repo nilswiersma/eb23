@@ -5346,7 +5346,7 @@
                     hW(a, a3()),
                     null !== b)
                 )
-                    for (d = a.onRecoverableError, c = 0; c < b.length; c++) d((e = b[c]).value, { componentStack: e.stack, digest: e.digest });
+                    for (d = a.onRecoverableError, c = 0; c < b.length; c++) null != (e = b[c]).value && d(e.value, { componentStack: e.stack, digest: e.digest });
                 if (hJ) throw ((hJ = !1), (a = hK), (hK = null), a);
                 return 0 != (1 & hO) && 0 !== a.tag && ig(), 0 != (1 & (f = a.pendingLanes)) ? (a === hQ ? hP++ : ((hP = 0), (hQ = a))) : (hP = 0), eo(), null;
             }
