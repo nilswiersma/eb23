@@ -7,8 +7,8 @@ from markupsafe import escape
 from werkzeug.middleware.proxy_fix import ProxyFix
 
 app = Flask(__name__, subdomain_matching=True)
-# app.config['SERVER_NAME'] = 'hardcoredancing.nl'
-# app.config['PREFERRED_URL_SCHEME'] = 'https'
+app.config['SERVER_NAME'] = 'hardcoredancing.nl'
+app.config['PREFERRED_URL_SCHEME'] = 'https'
 # nginx terminates TLS and forwards X-Forwarded-{Proto,Host,For}; trust 1 hop.
 app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1)
 
