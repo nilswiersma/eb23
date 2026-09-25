@@ -186,6 +186,7 @@
             false,
             false,
             false,
+<<<<<<< HEAD
             false,
             false,
             false,
@@ -212,6 +213,8 @@
             false,
             false,
             false,
+=======
+>>>>>>> 0b20a7a (data)
             false
         ]
     },

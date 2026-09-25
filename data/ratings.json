@@ -1,30 +1,107 @@
 {
     "Agent Fresco": {
         "nils": "\ud83e\udd0e",
-        "tom": "\ud83d\udc9c"
+        "tom": "\u2620\ufe0f",
+        "bas": "\ud83d\udc68\ud83c\udffc\u200d\ud83e\uddb3",
+        "martje": "\ud83e\udd20"
     },
     "Vildhjarta": {
         "nils": "\ud83e\udd0e",
-        "tom": "\ud83d\udc9c"
+        "tom": "\ud83d\udc9c",
+        "bas": "\ud83e\udd70"
     },
     "The Dali Thundering Concept": {
-        "nils": "\ud83e\udd0e",
-        "tom": "\ud83d\udc9c"
+        "nils": "\u2764\ufe0f",
+        "tom": "\ud83d\udc9c",
+        "bas": "\u23f1\ufe0f"
     },
     "Karmanjakah": {
         "nils": "\ud83e\udd0e",
-        "tom": "\ud83d\udc9c"
+        "tom": "\ud83d\udc9c",
+        "martje": "\ud83d\udcaf"
     },
     "Humanity's Last Breath": {
         "nils": "\ud83e\udd0e"
     },
     "Decapitated": {
-        "nils": "\ud83c\uddf5\ud83c\uddf1"
+        "nils": "\ud83c\uddf5\ud83c\uddf1",
+        "bas": "\ud83e\uddab",
+        "tom": "\ud83e\udd5f"
     },
     "The Dear Hunter": {
-        "nils": "\ud83e\udd0e"
+        "nils": "\ud83e\udd0e",
+        "tom": "\ud83e\udd8c",
+        "bas": "\ud83c\udff9",
+        "martje": "\ud83e\udd70"
     },
     "Fractal Sun": {
-        "tom": "\ud83c\udf44\ud83d\udc83 "
+        "tom": "\ud83c\udf44\ud83d\udc83 ",
+        "bas": "\u203c\ufe0f",
+        "nils": "\u203c\ufe0f"
+    },
+    "The Broken Horizon": {
+        "nils": "\u26c8\ufe0f"
+    },
+    "Anciients": {
+        "tom": "\ud83d\udc9c",
+        "nils": "\u2764\ufe0f",
+        "martje": "\ud83c\udfdb\ufe0f"
+    },
+    "Panzerballett": {
+        "bas": "\ud83e\uddd1\ud83c\udffc\u200d\ud83e\ude70",
+        "tom": "\ud83c\udfba"
+    },
+    "Textures": {
+        "bas": "\ud83e\uddc0",
+        "laura": "\ud83d\ude42\u200d\u2195\ufe0f",
+        "tom": "\ud83c\udfb9"
+    },
+    "Gorod": {
+        "bas": "\ud83e\udd56",
+        "nils": "\ud83e\uddd1\ud83c\udffb\u200d\ud83c\udf73",
+        "martje": "\ud83e\udd2e"
+    },
+    "Seven Blood": {
+        "bas": "\u203c\ufe0f",
+        "tom": "\u203c\ufe0f"
+    },
+    "Swallow The Sun": {
+        "bas": "\ud83c\udf1e"
+    },
+    "Humanitys Last Breath": {
+        "bas": "\ud83c\udf2c\ufe0f"
+    },
+    "Seething Akira": {
+        "bas": "\ud83c\udfcd\ufe0f"
+    },
+    "Haken": {
+        "tom": "\ud83e\udeb3",
+        "bas": "\ud83d\udc51"
+    },
+    "Einar Solberg": {
+        "bas": "\u2b1c",
+        "martje": "\ud83e\udd14"
+    },
+    "Afterparty": {
+        "bas": "\ud83d\udc8a"
+    },
+    "Abysmal Dawn": {
+        "bas": "\ud83c\udf04"
+    },
+    "Royal Sorrow": {
+        "tom": "\ud83d\udc51",
+        "bas": "\ud83d\ude2d"
+    },
+    "Enterprise Earth": {
+        "nils": "\u267b\ufe0f"
+    },
+    "Interra": {
+        "tom": "\ud83d\udc9c"
+    },
+    "Alkera": {
+        "tom": "\ud83e\udd83"
+    },
+    "The Reticent": {
+        "tom": "\ud83d\udde3\ufe0f"
     }
 }
